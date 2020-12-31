@@ -212,12 +212,13 @@ header .header_top{
   height: 100%;
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fff;
   border: none;
   box-sizing: border-box;
 }
 .search .search_btn{
   border: none;
-  background-color: transparent;
+  background-color: #fff;
   width: 25px;
   height: 25px;
   color: #666;
