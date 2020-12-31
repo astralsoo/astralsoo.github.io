@@ -9,11 +9,21 @@ html{
 }
 
 body{
-  background: url(./img/fullscreen-background.jpg) no-repeat center / cover;
-  background-attachment: fixed;
   color: #fff;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   overflow-x: hidden;
+}
+body::before{
+  content: ' ';
+  display: block;
+  background-image: url(./img/fullscreen-background.jpg) no-repeat center / cover;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
   z-index: -10;
 }
 
