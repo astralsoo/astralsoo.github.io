@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+
+.footer{
+  height: 210px;
+  background-color: #555A59;
+}
+
+.footer .footer_nav{
+  max-width: 1090px;
+  height: 70px;
+  border-bottom: 1px solid #777;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.footer_nav::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.footer_nav .ft_innerlink{
+  float: left;
+  height: 100%;
+  padding: 25px 0;
+  box-sizing: border-box;
+  font-size: 0;
+}
+.ft_innerlink > a{
+  display: inline-block;
+  height: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+  padding: 0 20px;
+  border-left: 1px solid #aaa;
+  box-sizing: border-box;
+  letter-spacing: -1px;
+}
+.ft_innerlink > a:first-child{
+  color: goldenrod;
+  padding-left: 0;
+  border-left: none;
+}
+.ft_innerlink > a:hover{
+  color: #00A084;
+}
+
+/* 국회관련 사이트 */
+.footer_nav .ft_outlink{
+  float: right;
+  position: relative;
+}
+.ft_outlink > button{
+  width: 220px;
+  border: 1px solid #aaa;
+  background-color: #555A59;
+  color: #ddd;
+  font-size: 13px;
+  padding: 10px 20px;
+  text-align: left;
+  margin-top: 15px;
+  cursor: pointer;
+  background: url(./img/arrow_up.png) no-repeat center right 5px;
+  background-size: 25px 10px;
+}
+.ft_outlink > button:hover{
+  background-color: #4d5251;
+  border-color: #fff;
+}
+.ft_outlink .ft_outlink_list{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  border: 1px solid #000;
+  background-color: #fff;
+  display: none;
+}
+.ft_outlink_list > a{
+  display: block;
+  padding: 11px 18px;
+  background-color: #fff;
+  border-bottom: 1px solid #aaa;
+  font-size: 12px;
+  font-weight: bold;
+}
+.ft_outlink_list > a:hover{
+  background-color: #00A084;
+  color: #fff;
+}
+.ft_outlink > button.active + .ft_outlink_list{
+  display: block;
+}
+
+.footer footer{
+  max-width: 1090px;
+  margin: 0 auto;
+}
+.footer footer > img{
+  margin-top: 12px;
+}
+.footer footer > .address{
+  font-size: 13px;
+  font-style: normal;
+  color: #fff;
+  line-height: 20px;
+}
+.address > p:nth-of-type(2),
+.address > p:nth-of-type(3){
+  display: inline-block;
+}
+.address > p:nth-of-type(2)::after{
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #fff;
+  vertical-align: middle;
+  margin: 0 4px 0 8px;
+}
+.address b{
+  color: #2DE0B6;
+  font-weight: normal;
+}
+.address a:hover{
+  color: #00A084;
+}
+
+
+/* 사이드바 네비게이션 */
+
+.sidebar{
+  width: 100px;
+  height: 102vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  color: #fff;
+  overflow: hidden;
+}
+.sidebar .side_nav_list{
+  width: 100%;
+  height: 100%;
+}
+.side_nav_list .side_nav_item{
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(88, 88, 88);
+  position: relative;
+}
+.side_nav_item > a{
+  display: block;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: .3s;
+}
+.side_nav_item:nth-of-type(1){
+  background-color: #137564;
+}
+.side_nav_item:nth-of-type(2){
+  background-color: #08987F;
+}
+.side_nav_item:nth-of-type(1) > a{
+  background: url(./img/main_icon_write.png) no-repeat center top 20px;
+  background-size: 40px 50px;
+}
+.side_nav_item:nth-of-type(2) > a{
+  background: url(./img/main_icon_agree.png) no-repeat center top 10px;
+  background-size: 40px 50px;
+}
+.side_nav_item:nth-of-type(1),
+.side_nav_item:nth-of-type(2){
+  height: 130px;
+  border-bottom: none;
+  font-weight: bold;
+  line-height: 170px;
+  text-align: center;
+}
+.side_nav_item:nth-of-type(2)::before,
+.side_nav_item:nth-of-type(3)::before{
+  content: '';
+  display: block;
+  width: 110%;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  transform: rotate(-10deg) translate(-3px, 9px);
+}
+.side_nav_item:nth-of-type(2)::before{
+  background-color: #08987F;
+}
+.side_nav_item:nth-of-type(3)::before{
+  background-color: black;
+}
+
+.side_nav_item:nth-of-type(n+3){
+  height: 75px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.side_nav_item:nth-of-type(n+3) > a{
+  padding-top: 32px;
+  padding-left: 50px;
+}
+.side_nav_item:nth-of-type(3) > a{
+  background: url(./img/right_banner.png) no-repeat;
+  background-position: top 30px left 5px;
+}
+.side_nav_item:nth-of-type(4) > a{
+  background: url(./img/right_banner.png) no-repeat;
+  background-position: top -48px left 4px;
+}
+.side_nav_item:nth-of-type(5) > a{
+  background: url(./img/right_banner.png) no-repeat;
+  background-position: top -132px left 7px;
+  padding-left: 54px;
+}
+.side_nav_item:nth-of-type(6) > a{
+  background: url(./img/right_banner.png) no-repeat;
+  background-position: top -306px left 7px;
+  padding-top: 18px;
+  line-height: 20px;
+}
+.side_nav_item:nth-of-type(7) > a{
+  background: url(./img/right_banner.png) no-repeat;
+  background-position: top -222px left 7px;
+}
+
+.side_nav_item:hover > a{
+  transform: scale(1.1);
+}
+
+.totop{
+  position: fixed;
+  right: 130px;
+  bottom: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.totop.active{
+  opacity: 1;
+  visibility: visible;
+}
+.totop >a{
+  display: block;
+  height: 100%;
+  line-height: 70px;
+  background: url(./img/arrow_up.png) no-repeat left 20px top 10px;
+  background-size: 30px 12px;
+  box-sizing: border-box;
+}
+.totop:hover{
+  background-color: #08987F;
+}
