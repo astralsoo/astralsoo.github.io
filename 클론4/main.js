@@ -9,7 +9,7 @@ $(function(){
           function(){
             $(".header").removeClass("active");
             $(".gnb_btn > .fa").removeClass("fa-angle-double-left").addClass("fa-angle-double-right");
-          }, 1500
+          }, 1000
         )
       }
     })
