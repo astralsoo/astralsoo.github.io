@@ -127,6 +127,7 @@
   }
   .sub_gnb.active{
     width: 300px;
+    overflow-y: scroll;
   }
   .sub_gnb .sub_gnb_list{
     width: 100%;
