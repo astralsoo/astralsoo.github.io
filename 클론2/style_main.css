@@ -204,11 +204,11 @@ header .header_top{
   padding: 0 15%;
   background-color: #fff;
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 99;
   display: none;
 }
 .search input[id=search]{
-  width: calc(100% - 30px);
+  width: calc(100% - 50px);
   height: 100%;
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, sans-serif;
