@@ -218,7 +218,7 @@
   input[type='text'],
   input[type='email'],
   input[type='tel']{
-    width: calc(100% - 40px);
+    width: calc(100% - 50px);
   }
   .main_wrap .main_thumbnail{
     width: 450px;
@@ -389,7 +389,7 @@
   }
   .subscribe_form input[type='text'],
   .subscribe_form input[type='email']{
-    width: calc(100% - 40px);
+    width: calc(100% - 50px);
   }
   .contact_wrap .address_map{
     width: 95%;
