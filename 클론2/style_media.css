@@ -179,6 +179,10 @@
 }
 
 @media screen and (max-width: 767px){
+  .lang_option > a{
+    font-size: 10px;
+  }
+  
   .brands_logo_slide_wrap{
     display: none;
     margin: 0;
@@ -320,9 +324,6 @@
 }
 
 @media screen and (max-width: 500px){
-  .lang_option > a{
-    font-size: 10px;
-  }
   .lang .lang_btn,
   .header_top label[for=search]{
     font-size: 18px;
