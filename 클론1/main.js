@@ -218,7 +218,7 @@ $(function(){
   // 분야별보기 이미지 삽입
   let items = $(".category_list > a");
   for(let i = 1 ; i < items.length +1 ; i++){
-    $(".category_list > a:nth-child(" + i + ")").children(".category_icon").prepend("<img src='http://astralsoo.github.io/클론1/img/icon" + i + ".png'>");
+    $(".category_list > a:nth-child(" + i + ")").children(".category_icon").prepend("<img src='https://astralsoo.github.io/클론1/img/icon" + i + ".png'>");
   };
 
 })
