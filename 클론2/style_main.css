@@ -9,7 +9,7 @@ html{
 }
 
 body{
-  background: url(https://astralsoo.github.io/클론2/img/fullscreen-background.jpg) no-repeat center / cover;
+  background: url(./img/fullscreen-background.jpg) no-repeat center / cover;
   background-attachment: fixed;
   color: #fff;
   font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -37,7 +37,7 @@ header .header_top{
 .header_top .main_logo{
   width: 330px;
   height: inherit;
-  background: url(https://astralsoo.github.io/클론2/img/main-logo-white.png) no-repeat center / contain;
+  background: url(./img/main-logo-white.png) no-repeat center / contain;
   margin: 0 auto;
   transition: .3s;
 }
