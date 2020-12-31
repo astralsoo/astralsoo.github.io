@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./style_left.css">
+  <link rel="stylesheet" href="./style_main.css">
+  <link rel="stylesheet" href="./style_right.css">
+  <link rel="stylesheet" href="./style.media.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="./autosize-master/dist/autosize.js"></script>
+  <script src="./main.js"></script>
+
+  <title>트위터 | 클론페이지</title>
+</head>
+<body>
+  <section class="left_bar">
+    <div class="left_bar_wrap">
+      <div class="gnb">
+        <h1 class="logo">
+          <a href="#"><span class="hidden">트위터</span></a>
+        </h1>
+        <ul class="gnb_list">
+          <li class="gnb_item">
+            <a href="#none">
+              <span class="gnb_icon">
+                <i class="fa fa-home" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">홈</span>
+            </a>
+          </li>
+          <li class="gnb_item">
+            <a href="#none">
+              <span class="gnb_icon">
+                <i class="fa fa-hashtag" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">탐색하기</span>
+            </a>
+          </li>
+          <li class="gnb_item">
+            <a href="#none">
+              <span class="gnb_icon">
+                <i class="fa fa-bell-o" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">알림</span>
+            </a>
+          </li>
+          <li class="gnb_item">
+            <a href="#none">
+              <span class="gnb_icon">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">쪽지</span>
+            </a>
+          </li>
+          <li class="gnb_item">
+            <a href="#none">
+              <span class="gnb_icon">
+                <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">북마크</span>
+            </a>
+          </li>
+          <li class="gnb_item">
+            <a href="#none">
+              <span class="gnb_icon">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">리스트</span>
+            </a>
+          </li>
+          <li class="gnb_item">
+            <a href="#none">
+              <span class="gnb_icon">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">프로필</span>
+            </a>
+          </li>
+          <li class="gnb_item">
+            <span>
+              <span class="gnb_icon">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+              </span>
+              <span class="gnb_text">더 보기</span>
+            </span>
+            <ul class="gnb_sub_list extra_list">
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                  </span>
+                  북마크
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  </span>
+                  리스트
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  </span>
+                  토픽
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                  </span>
+                  모멘트
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-external-link-square" aria-hidden="true"></i>
+                  </span>
+                  트위터 광고
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                  </span>
+                  애널리틱스
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </span>
+                  설정 및 개인정보
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                  </span>
+                  고객센터
+                </a>
+              </li>
+              <li class="extra_list_item">
+                <a href="#none">
+                  <span class="extra_list_icon">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  </span>
+                  표시
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="layer_dim"></div>
+        <button class="gnb_btn_twt">
+          <span>트윗</span>
+        </button>
+      </div>
+      <div class="user">
+        <div class="user_profile">
+          <div class="user_img"></div>
+          <span class="user_name">닉네임</span>
+          <span class="user_id">@nickname</span>
+        </div>
+        <div class="user_modal">
+          <div class="user_now_logOn"></div>
+          <a href="#none">기존 계정 추가</a>
+          <a href="#none">
+            <span></span>님 계정에서 로그아웃
+          </a>
+        </div>
+        <div class="layer_dim"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main">
+    <div class="main_header">
+      <h2>최신 트윗</h2>
+      <span class="main_header_btn"></span>
+    </div>
+    <div class="main_input_wrap">
+      <div class="user_img_box">
+        <div class="user_img">
+          <a href="#none"></a>
+        </div>
+      </div>
+      <div class="main_input_box">
+        <textarea name="write_twit" rows="1" cols="20" wrap="hard" maxlength="140" placeholder="트윗을 입력해보세요!"></textarea>
+        <div class="input_bottom">
+          <div class="input_btn_wrap">
+            <button class="input_btn">
+              <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </button>
+            <button class="input_btn">
+              <i class="fa fa-tasks" aria-hidden="true"></i>
+            </button>
+            <button class="input_btn">
+              <i class="fa fa-smile-o" aria-hidden="true"></i>
+            </button>
+            <button class="input_btn">
+              <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="input_right_side">
+            <div class="input_check_words">
+              <span>140</span>
+            </div>
+            <button class="input_twit">트윗</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main_twit_list">
+      <div class="main_twit_item">
+        <div class="user_img_box">
+          <div class="user_img">
+            <a href="#none">
+              <img src="./img/profile_img1.png" alt="profile_image">
+            </a>
+          </div>
+        </div>
+        <div class="twit_content_box">
+          <div class="twit_header">
+            <a href="#none">
+              <span class="twit_user_name">가나다</span>
+              <span class="twit_user_id">@Ganada</span>
+            </a>
+            <span>·</span>
+            <a href="#none" class="twit_time">3분</a>
+          </div>
+          <div class="twit_content">
+            <p class="twit_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque neque culpa maiores recusandae dolores perspiciatis modi reprehenderit consequatur iusto nulla?
+            </p>
+          </div>
+          <div class="twit_footer_btn">
+            <div class="comment">
+              <button>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">1</span>
+            </div>
+            <div class="retweet">
+              <button>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">1423</span>
+            </div>
+            <div class="like">
+              <button>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">937</span>
+            </div>
+            <div class="share">
+              <button>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </button>
+              <ul class="twit_extra_menu extra_list">
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </span>
+                    쪽지로 보내기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </span>
+                    북마크에 트윗 추가하기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-link" aria-hidden="true"></i>
+                    </span>
+                    트윗 링크 복사하기
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="extra_menu_btn">
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </button>
+        <ul class="twit_extra_menu extra_list">
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+              </span>
+              <span></span>님 팔로우하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+              </span>
+              리스트에서 추가/제거하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+              </span>
+              <span></span>님 뮤트하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-ban" aria-hidden="true"></i>
+              </span>
+              <span></span>님 차단하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-code" aria-hidden="true"></i>
+              </span>
+              트윗 담아가기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-flag-o" aria-hidden="true"></i>
+              </span>
+              트윗 신고하기
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main_twit_item">
+        <div class="user_img_box">
+          <div class="user_img">
+            <a href="#none"></a>
+          </div>
+        </div>
+        <div class="twit_content_box">
+          <div class="twit_header">
+            <a href="#none">
+              <span class="twit_user_name">라마바</span>
+              <span class="twit_user_id">@ramaba</span>
+            </a>
+            <span>·</span>
+            <a href="#none" class="twit_time">25분</a>
+          </div>
+          <div class="twit_content">
+            <p class="twit_text">
+              릴케 않은 어머니. 둘 옥 이름과, 것은 듯합니다. 없이 벌레는 차 사랑과 밤이 별 봅니다. 하나의 까닭이요, 딴은 계십니다. 하나에 당신은 멀리 이름과, 아직 그러나 버리었습니다. 지나고 가을 둘 이 계십니다. 벌레는 위에 피어나듯이 거외다.
+            </p>
+          </div>
+          <div class="twit_footer_btn">
+            <div class="comment">
+              <button>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num"></span>
+            </div>
+            <div class="retweet">
+              <button>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">58</span>
+            </div>
+            <div class="like">
+              <button>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">32</span>
+            </div>
+            <div class="share">
+              <button>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </button>
+              <ul class="twit_extra_menu extra_list">
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </span>
+                    쪽지로 보내기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </span>
+                    북마크에 트윗 추가하기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-link" aria-hidden="true"></i>
+                    </span>
+                    트윗 링크 복사하기
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="extra_menu_btn">
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </button>
+        <ul class="twit_extra_menu extra_list">
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+              </span>
+              <span></span>님 팔로우하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+              </span>
+              리스트에서 추가/제거하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+              </span>
+              <span></span>님 뮤트하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-ban" aria-hidden="true"></i>
+              </span>
+              <span></span>님 차단하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-code" aria-hidden="true"></i>
+              </span>
+              트윗 담아가기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-flag-o" aria-hidden="true"></i>
+              </span>
+              트윗 신고하기
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main_twit_item" data-user="lock">
+        <div class="user_img_box">
+          <div class="user_img">
+            <a href="#none">
+              <img src="./img/profile_img2.png" alt="profile_image">
+            </a>
+          </div>
+        </div>
+        <div class="twit_content_box">
+          <div class="twit_header">
+            <a href="#none">
+              <span class="twit_user_name">사아자</span>
+              <span class="twit_user_id">@Sa-a-za</span>
+            </a>
+            <span>·</span>
+            <a href="#none" class="twit_time">2시간</a>
+          </div>
+          <div class="twit_content">
+            <p class="twit_text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, illum?
+            </p>
+            <div class="twit_img" data-thumb="1">
+              <img src="./img/twit_thumbnail1.jpg" alt="thumbnail">
+            </div>
+          </div>
+          <div class="twit_footer_btn">
+            <div class="comment">
+              <button>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">3</span>
+            </div>
+            <div class="retweet">
+              <button disabled>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num"></span>
+            </div>
+            <div class="like">
+              <button>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">27</span>
+            </div>
+            <div class="share">
+              <button>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </button>
+              <ul class="twit_extra_menu extra_list">
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </span>
+                    쪽지로 보내기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </span>
+                    북마크에 트윗 추가하기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-link" aria-hidden="true"></i>
+                    </span>
+                    트윗 링크 복사하기
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="extra_menu_btn">
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </button>
+        <ul class="twit_extra_menu extra_list">
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+              </span>
+              <span></span>님 팔로우하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+              </span>
+              리스트에서 추가/제거하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+              </span>
+              <span></span>님 뮤트하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-ban" aria-hidden="true"></i>
+              </span>
+              <span></span>님 차단하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-code" aria-hidden="true"></i>
+              </span>
+              트윗 담아가기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-flag-o" aria-hidden="true"></i>
+              </span>
+              트윗 신고하기
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main_twit_item">
+        <div class="user_img_box">
+          <div class="user_img">
+            <a href="#none"></a>
+          </div>
+        </div>
+        <div class="twit_content_box">
+          <div class="twit_header">
+            <a href="#none">
+              <span class="twit_user_name">차카타</span>
+              <span class="twit_user_id">@chaKa-ta</span>
+            </a>
+            <span>·</span>
+            <a href="#none" class="twit_time">13시간</a>
+          </div>
+          <div class="twit_content">
+            <p class="twit_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus velit optio provident error illum temporibus libero, nemo asperiores! Assumenda sapiente illum numquam tempore quis neque alias rerum natus temporibus iusto ex, sed omnis cumque commodi consectetur eligendi aspernatur dolor eos.
+            </p>
+          </div>
+          <div class="twit_footer_btn">
+            <div class="comment">
+              <button>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num"></span>
+            </div>
+            <div class="retweet">
+              <button>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">529</span>
+            </div>
+            <div class="like">
+              <button>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">142</span>
+            </div>
+            <div class="share">
+              <button>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </button>
+              <ul class="twit_extra_menu extra_list">
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </span>
+                    쪽지로 보내기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </span>
+                    북마크에 트윗 추가하기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-link" aria-hidden="true"></i>
+                    </span>
+                    트윗 링크 복사하기
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="extra_menu_btn">
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </button>
+        <ul class="twit_extra_menu extra_list">
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+              </span>
+              <span></span>님 팔로우하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+              </span>
+              리스트에서 추가/제거하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+              </span>
+              <span></span>님 뮤트하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-ban" aria-hidden="true"></i>
+              </span>
+              <span></span>님 차단하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-code" aria-hidden="true"></i>
+              </span>
+              트윗 담아가기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-flag-o" aria-hidden="true"></i>
+              </span>
+              트윗 신고하기
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main_twit_item last-item">
+        <div class="user_img_box">
+          <div class="user_img">
+            <a href="#none"></a>
+          </div>
+        </div>
+        <div class="twit_content_box">
+          <div class="twit_header">
+            <a href="#none">
+              <span class="twit_user_name">파하</span>
+              <span class="twit_user_id">@paHA</span>
+            </a>
+            <span>·</span>
+            <a href="#none" class="twit_time">2일</a>
+          </div>
+          <div class="twit_content">
+            <p class="twit_text">
+              얼마나 무엇을 불어 희망의 스며들어 무엇이 하여도 있으랴? 풀이 그들은 구할 그리하였는가? 동력은 얼음에 미묘한 불어 이상의 만물은 피부가 위하여서. 구하지 든 할지라도 황금시대다.
+            </p>
+            <div class="twit_img" data-thumb="2">
+              <img src="./img/twit_thumbnail2.jpg" alt="thumbnail">
+              <img src="./img/twit_thumbnail3.jpg" alt="thumbnail">
+            </div>
+          </div>
+          <div class="twit_footer_btn">
+            <div class="comment">
+              <button>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">13</span>
+            </div>
+            <div class="retweet">
+              <button>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">873</span>
+            </div>
+            <div class="like">
+              <button>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num">1397</span>
+            </div>
+            <div class="share">
+              <button>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </button>
+              <ul class="twit_extra_menu extra_list">
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </span>
+                    쪽지로 보내기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </span>
+                    북마크에 트윗 추가하기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-link" aria-hidden="true"></i>
+                    </span>
+                    트윗 링크 복사하기
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="extra_menu_btn">
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </button>
+        <ul class="twit_extra_menu extra_list">
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+              </span>
+              <span></span>님 팔로우하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+              </span>
+              리스트에서 추가/제거하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+              </span>
+              <span></span>님 뮤트하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-ban" aria-hidden="true"></i>
+              </span>
+              <span></span>님 차단하기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-code" aria-hidden="true"></i>
+              </span>
+              트윗 담아가기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-flag-o" aria-hidden="true"></i>
+              </span>
+              트윗 신고하기
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main_twit_item twit_item_basic">
+        <div class="user_img_box">
+          <div class="user_img">
+            <a href="#none"></a>
+          </div>
+        </div>
+        <div class="twit_content_box">
+          <div class="twit_header">
+            <a href="#none">
+              <span class="twit_user_name"></span>
+              <span class="twit_user_id"></span>
+            </a>
+            <span>·</span>
+            <a href="#none" class="twit_time">지금</a>
+          </div>
+          <div class="twit_content">
+            <p class="twit_text"></p>
+          </div>
+          <div class="twit_footer_btn">
+            <div class="comment">
+              <button>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num"></span>
+            </div>
+            <div class="retweet">
+              <button>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num"></span>
+            </div>
+            <div class="like">
+              <button>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </button>
+              <span class="twit_footer_btn_num"></span>
+            </div>
+            <div class="share">
+              <button>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </button>
+              <ul class="twit_extra_menu extra_list">
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </span>
+                    쪽지로 보내기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </span>
+                    북마크에 트윗 추가하기
+                  </a>
+                </li>
+                <li class="extra_list_item">
+                  <a href="#none">
+                    <span class="extra_list_icon">
+                      <i class="fa fa-link" aria-hidden="true"></i>
+                    </span>
+                    트윗 링크 복사하기
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="extra_menu_btn">
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </button>
+        <ul class="twit_extra_menu extra_list">
+          <li class="extra_list_item twit_delete">
+            <span class="extra_list_icon" style="color: red;">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </span>
+            삭제
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+              </span>
+              내 프로필 메인에 올리기
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              <span class="extra_list_icon">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+              </span>
+              트윗 활동 보기
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="right_bar">
+    <div class="search">
+      <div class="search_box">
+        <label for="search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </label>
+        <input type="search" id="search" placeholder="트위터 검색">
+      </div>
+    </div>
+    <div class="trend">
+      <div class="trend_header">
+        <h3>대한민국의 트렌드</h3>
+        <a href="#none">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="trend_promo">
+        <a href="#none">
+          <span class="trend_hashtag">
+            #고양이_귀여워_냥냥
+          </span>
+          <span class="trend_promo_txt">
+            고양이😺 너무 귀여워 최고최고🎶 강아지도 좋지만🐶 냥냥펀치👊
+          </span>
+          <span class="trend_promo_info">
+            <i class="fa fa-external-link-square" aria-hidden="true"></i>
+            CAT_HOLIC_UNIV 님이 프로모션함
+          </span>
+        </a>
+      </div>
+      <ol class="trend_ranking">
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span class="category">엔터테인먼트</span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              #고양이
+            </span>
+            <span class="trend_twit_num">8,302트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span class="category">뮤직</span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              인기가요
+            </span>
+            <span class="trend_twit_num">7,820트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              마라탕
+            </span>
+            <span class="trend_twit_num">5,428트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              #Lorem_ipsum
+            </span>
+            <span class="trend_twit_num">3,267트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span class="category">사회</span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              코로나19
+            </span>
+            <span class="trend_twit_num">10,385트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span class="category">사회</span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              거리두기 2단계
+            </span>
+            <span class="trend_twit_num">7,218트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              #나의_마라탕_프로필
+            </span>
+            <span class="trend_twit_num">1,273트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span class="category">뮤직</span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              빌보드 1위
+            </span>
+            <span class="trend_twit_num">4,927트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="trend_ranking_item">
+          <a href="#none">
+            <div class="ranking_header">
+              <span class="rank"></span>
+              <span class="category">스포츠</span>
+              <span>트렌드</span>
+            </div>
+            <span class="trend_hashtag">
+              무사만루
+            </span>
+            <span class="trend_twit_num">1,921트윗</span>
+          </a>
+          <button class="extra_menu_btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+          <ul class="trend_extra_menu extra_list">
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                관심 없음
+              </a>
+            </li>
+            <li class="extra_list_item">
+              <a href="#none">
+                <span class="extra_list_icon">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </span>
+                유해하거나 스팸성의 트렌드입니다
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <a href="#none" class="trend_more">더 보기</a>
+    </div>
+    <div class="follow">
+      <div class="follow_header">
+        <h3>팔로우 추천</h3>
+      </div>
+      <ul class="follow_user_list">
+        <li class="follow_user">
+          <button>팔로우</button>
+          <a href="#none" class="user_profile">
+            <div class="user_img">
+              <img src="./img/profile_img3.png" alt="profile_image">
+            </div>
+            <span class="user_name">가을여우</span>
+            <span class="user_id">@FallFox</span>
+          </a>
+        </li>
+        <li class="follow_user">
+          <button>팔로우</button>
+          <a href="#none" class="user_profile">
+            <div class="user_img">
+              <img src="./img/profile_img4.png" alt="profile_image">
+            </div>
+            <span class="user_name">우주의먼지</span>
+            <span class="user_id">@universe_dust</span>
+          </a>
+        </li>
+        <li class="follow_user">
+          <button>팔로우</button>
+          <a href="#none" class="user_profile">
+            <div class="user_img"></div>
+            <span class="user_name">계정1</span>
+            <span class="user_id">@account_1</span>
+          </a>
+        </li>
+      </ul>
+      <a href="#none" class="follow_more">더 보기</a>
+    </div>
+    <footer>
+      <a href="#none">이용약관</a>
+      <a href="#none">개인정보 처리방침</a>
+      <a href="#none">쿠키 정책</a>
+      <a href="#none">광고 정보</a>
+      <div class="footer_more">
+        <span>
+          더 보기
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </span>
+        <ul class="extra_list">
+          <li class="extra_list_item">
+            <a href="#none">
+              소개
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              상태
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              비즈니스용 트위터
+            </a>
+          </li>
+          <li class="extra_list_item">
+            <a href="#none">
+              개발자
+            </a>
+          </li>
+        </ul>
+      </div>
+      <span>© 2020 Twitter</span>
+    </footer>
+  </section>
+
+  <div class="messenger">
+    <div class="msn_onoff">
+      <h3>쪽지</h3>
+    </div>
+    <button class="write_msn">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    </button>
+    <button class="open_close_msn">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+    <div class="msn_list">
+      <div class="msn_preview user_profile">
+        <div class="user_img">
+          <img src="./img/profile_img1.png" alt="profile_image">
+        </div>
+        <span class="user_name">가나다</span>
+        <span class="user_id">@Ganada</span>
+        <span class="msn_date">7월 24일</span>
+        <p class="msn_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, cupiditate!
+        </p>
+      </div>
+      <div class="msn_preview user_profile">
+        <div class="user_img">
+          <img src="./img/profile_img4.png" alt="profile_image">
+        </div>
+        <span class="user_name">우주의먼지</span>
+        <span class="user_id">@universe_dust</span>
+        <span class="msn_date">5월 31일</span>
+        <p class="msn_text">
+          위하여, 인생을 실로 얼음이 우리 속에서 것이다. 심장의 갑 이 그들은 주며, 싸인 끓는 운다. 동산에는 되려니와, 앞이 칼이다. 붙잡아 들어 관현악이며, 약동하다.
+        </p>
+      </div>
+      <div class="msn_preview user_profile">
+        <div class="user_img"></div>
+        <span class="user_name">무명1</span>
+        <span class="user_id">@noname_1</span>
+        <span class="msn_date">2월 29일</span>
+        <p class="msn_text">
+          이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다. 이 편지를 포함해서 7통을 행운이 필요한 사람에게 보내 주셔야 합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+
+.right_bar{
+  width: 32%;
+  height: auto;
+  position: sticky;
+  top: 0;
+  padding-left: 30px;
+  border-left: 1px solid #E6ECF0;
+  float: right;
+  box-sizing: border-box;
+}
+.right_bar > div,
+.right_bar > footer{
+  width: 330px;
+}
+
+.right_bar .search{
+  position: fixed;
+  top: 0;
+  height: 54px;
+  padding: 5px 0;
+  background-color: #fff;
+  z-index: 10;
+  box-sizing: border-box;
+}
+.search .search_box{
+  height: 100%;
+  padding: 8px 20px;
+  background-color: #E6ECF0;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #70818F;
+}
+.search_box.active{
+  background-color: #fff;
+  border: 1px solid #1DA1F2;
+}
+.search_box > label{
+  font-size: 18px;
+}
+.search_box.active > label{
+  color: #1DA1F2;
+}
+.search_box > input{
+  width: 240px;
+  height: 100%;
+  font-size: 15px;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  background-color: #E6ECF0;
+}
+.search_box.active > input{
+  background-color: #fff;
+}
+
+.trend,
+.follow{
+  border-radius: 15px;
+  background-color: #F5F8FA;
+  overflow: hidden;
+}
+.trend{
+  margin-top: 64px;
+}
+.follow{
+  margin-top: 20px;
+}
+.trend .trend_header,
+.follow .follow_header,
+.trend .trend_promo > a,
+.trend .trend_ranking_item > a,
+.follow_user .user_profile{
+  padding: 15px;
+  border-bottom: 1px solid #E6ECF0;
+  position: relative;
+}
+.trend .trend_more,
+.follow .follow_more{
+  display: block;
+  padding: 15px;
+  font-size: 15px;
+  color: #1DA1F2;
+  transition: .2s;
+}
+
+.trend_header > h3{
+  font-size: 19px;
+}
+.trend_header > a{
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  color: #1DA1F2;
+  border-radius: 50%;
+  float: right;
+  transition: .2s;
+}
+.trend_header > a:hover{
+  background-color: #def0fd;
+}
+.trend_promo{
+  color: #657786;
+}
+.trend_promo > a,
+.trend_ranking_item > a{
+  display: block;
+  height: 100%;
+  transition: .2s;
+  position: relative;
+}
+.trend_promo > a:hover,
+.trend_ranking_item:hover,
+.trend .trend_more:hover,
+.follow_user .user_profile:hover,
+.follow_user > button:hover + .user_profile,
+.follow .follow_more:hover{
+  background-color: #EDF0F2;
+}
+.trend_promo > a > span{
+  display: block;
+}
+.trend_hashtag{
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
+.trend_promo_txt{
+  font-size: 15px;
+  margin: 10px 0;
+}
+.trend_promo_info{
+  font-size: 13px;
+}
+.trend_ranking .trend_ranking_item{
+  padding: 0;
+  position: relative;
+  transition: .2s;
+}
+.trend_ranking_item:nth-of-type(n+5){
+  display: none;
+}
+.trend_ranking_item .ranking_header,
+.trend_ranking_item .trend_twit_num{
+  font-size: 13px;
+  color: #657786;
+}
+.ranking_header .rank::after,
+.ranking_header .category::after{
+  content: "·";
+  margin: 0 1px 0 5px;
+}
+.trend_ranking_item .trend_hashtag{
+  margin: 5px 0;
+}
+.trend_ranking_item .extra_menu_btn{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.trend_ranking_item .extra_menu_btn:hover{
+  background-color: #D8E8F2;
+}
+.trend_ranking_item .trend_extra_menu{
+  top: 10px;
+  right: 10px;
+}
+
+.follow_user{
+  position: relative;
+}
+.follow_user .user_profile{
+  display: block;
+}
+.follow_user .user_profile .user_img{
+  width: 50px;
+  height: 50px;
+  margin-top: -7px;
+  position: relative;
+  overflow: hidden;
+}
+.follow_user .user_profile .user_img::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: .2s;
+}
+.follow_user .user_profile .user_img:hover::before{
+  background-color: rgba(0, 0, 0, .2);
+}
+.follow_user .user_profile .user_name{
+  margin-left: 60px;
+  margin-bottom: 0;
+  width: max-content;
+  font-size: 15px;
+}
+.follow_user .user_profile .user_name:hover{
+  text-decoration: underline;
+}
+.follow_user .user_profile .user_id{
+  font-size: 14px;
+}
+
+.follow_user > button{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-weight: bold;
+  color: #1DA1F2;
+  background-color: transparent;
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: 1px solid #1DA1F2;
+  z-index: 5;
+  transition: .2s;
+}
+.follow_user > button:hover{
+  background-color: #D8E8F2;
+}
+.follow_user > button.active{
+  background-color: #1DA1F2;
+  color: #fff;
+}
+
+.right_bar > footer{
+  margin: 20px 0 80px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: #657786;
+  box-sizing: border-box;
+}
+.right_bar > footer > * {
+  margin-right: 5px;
+  line-height: 24px;
+}
+.footer_more{
+  display: inline-block;
+  position: relative;
+}
+.footer_more .fa{
+  margin-left: -3px;
+}
+.right_bar > footer > a:hover,
+.right_bar > footer .footer_more:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.right_bar .footer_more .extra_list{
+  bottom: 0;
+  right: 0;
+  width: 155px;
+}
+
+
+.messenger{
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  width: 400px;
+  border-radius: 15px 15px 0 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  transform: translateY(400px);
+  overflow: hidden;
+  z-index: 15;
+  transition: .3s;
+}
+.messenger.active{
+  transform: translateY(0);
+}
+.messenger .msn_onoff,
+.messenger .msn_preview{
+  padding: 15px;
+  border-bottom: 1px solid #E6ECF0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.msn_onoff > h3{
+  display: inline-block;
+  font-size: 20px;
+}
+.messenger > button{
+  position: absolute;
+  top: 7px;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  font-size: 20px;
+  color: #1DA1F2;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: .2s;
+}
+.messenger > button:hover{
+  background-color: #E8F5FE;
+}
+.messenger .write_msn{
+  right: 50px;
+  line-height: 18px;
+}
+.messenger .open_close_msn{
+  right: 10px;
+  font-size: 25px;
+  line-height: 22px;
+}
+.messenger .msn_list{
+  height: 400px;
+  overflow-y: scroll;
+}
+.msn_preview{
+  overflow: hidden;
+}
+.msn_preview:hover{
+  background-color: #F5F8FA;
+}
+.msn_preview .user_img{
+  width: 50px;
+  height: 50px;
+  margin-top: -3px;
+}
+.msn_preview .user_name{
+  display: inline-block;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.msn_preview .user_id,
+.msn_preview .msn_date{
+  font-size: 15px;
+  color: #70818F;
+}
+.msn_preview .msn_date{
+  float: right;
+}
+.msn_preview .msn_text{
+  height: 20px;
+  font-size: 15px;
+  color: #70818F;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
