@@ -1,0 +1,788 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+/* font-family: 'Hammersmith One', sans-serif; */
+
+@font-face {
+  font-family: 'Handon3gyeopsal300g';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv2 Gothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  font-family: 'Handon3gyeopsal300g';
+}
+h1, h2, h3{
+  font-family: 'NEXON Lv2 Gothic Bold';
+}
+em{
+  display: block;
+  font-style: normal;
+}
+
+/* 로딩창 */
+#loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #fff;
+}
+#loading > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #5C5C59;
+  text-align: center;
+}
+#loading .fa{
+  display: block;
+  margin-bottom: 20px;
+}
+#loading span{
+  font-weight: bold;
+}
+
+/* 하단 네비게이션 */
+.gnb{
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 99;
+  transition: .5s;
+}
+.gnb .gnb_list{
+  display: flex;
+  margin-top: 21px;
+}
+.gnb_list .gnb_item{
+  flex: 1;
+  height: 8px;
+  background-color: #5C5C59;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+  transition: .5s;
+}
+.gnb_item.active{
+  flex: 1.5;
+}
+.gnb_item > span{
+  position: absolute;
+  left: 50%;
+  top: -45px;
+  transform: translateX(-50%);
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 18px;
+  padding: 8px 10px 5px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.gnb_item > span::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  background-color: #fff;
+}
+.gnb_item:hover,
+.gnb_item.active{
+  background-color: #FFC83D;
+}
+.gnb_item:hover > span{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 전체 페이지 정렬 */
+.slide_wrap{
+  width: 500%;
+  height: 100vh;
+  font-size: 0;
+  position: relative;
+  transition: 1s;
+}
+.slide_wrap > section{
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  font-size: 16px;
+  padding: 80px;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1페이지 */
+.main{
+  background: url(./image/background1.jpg) no-repeat center / cover;
+  position: relative;
+}
+.main::before,
+.about::before,
+.contact::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .3);
+}
+.main > h1{
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 2px;
+  animation: ani_main 2.5s .5s both;
+}
+.main > h1 > em{
+  font-size: 56px;
+  letter-spacing: 10px;
+}
+@keyframes ani_main{
+  from{
+    opacity: 0;
+  }
+  to{}
+}
+
+/* 2페이지 */
+.about,
+.skill{
+  font-size: 0 !important;
+}
+.about{
+  background: url(./image/background2.jpg) no-repeat center / cover;
+}
+.about::before{
+  background-color: rgba(255, 255, 255, .4);
+}
+.headline{
+  font-size: 56px;
+  line-height: 80px;
+  letter-spacing: 5px;
+}
+.about .about_wrap{
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.about .headline{
+  width: max-content;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: url(./image/memoticon1.png) no-repeat top -15px left 100px;
+  background-size: 150px 150px;
+}
+.about .about_content{
+  padding-top: 50px;
+  font-size: 20px;
+  display: none;
+}
+.about_list > li{
+  margin-bottom: 30px;
+}
+.about_list > li > *{
+  vertical-align: middle;
+}
+.about_list > li > .fa{
+  width: 25px;
+  text-align: center;
+  margin-right: 4px;
+  padding-top: 4px;
+}
+.about_list > li > a{
+  color: #f37eb5;
+  position: relative;
+}
+.about_list > li > a::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background-color: #f37eb5;
+  transition: .3s;
+}
+.about_list > li > a:hover::before{
+  width: 100%;
+}
+
+@keyframes ani_about{
+  from{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 3페이지 */
+.skill{
+  background: url(./image/background3.jpg) no-repeat center / cover;
+}
+.skill_wrap{
+  overflow: hidden;
+}
+.skill_wrap:nth-of-type(1){
+  width: 40%;
+  float: right;
+  text-align: right;
+}
+.skill_wrap:nth-of-type(2){
+  width: 60%;
+  height: 100%;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+.skill_wrap .headline{
+  width: max-content;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: url(./image/memoticon2.png) no-repeat top -10px right 100px;
+  background-size: 150px 150px;
+}
+.skill_wrap > div{
+  float: left;
+  box-sizing: border-box;
+}
+.skill_wrap .skill_tech{
+  width: 60%;
+  height: 100%;
+  padding-right: 15px;
+  border-right: 3px double #dedede;
+}
+.skill_wrap .skill_bn,
+.skill_wrap .skill_lang{
+  width: calc(40% - 15px);
+  height: 50%;
+  margin-left: 15px;
+}
+.skill_wrap .skill_bn{
+  padding-bottom: 15px;
+  border-bottom: 3px double #dedede;
+}
+.skill_wrap .skill_lang{
+  padding-top: 15px;
+}
+.skill_wrap h3{
+  font-size: 24px;
+  font-family: 'Hammersmith One', sans-serif;
+  text-transform: uppercase;
+}
+.skill_list{
+  margin-top: 20px;
+}
+.skill_list > li{
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.skill_list .skill_icon{
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skill_icon > img{
+  width: 100%;
+  height: 100%;
+}
+.skill_bn img,
+.skill_lang img{
+  width: 70px;
+  height: auto;
+  transform: translateX(-6px);
+}
+.skill_bar,
+.skill_text{
+  margin-left: 70px;
+}
+.skill_list .skill_bar{
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.skill_bar > span{
+  display: block;
+  width: 0;
+  height: 15px;
+  margin: 4px;
+  background: linear-gradient(to right, #f37eb5, #FFC83D);
+  border-radius: 2px;
+  position: relative;
+}
+.skill_tech li:nth-of-type(1) .skill_bar > span{
+  animation-delay: 1.5s;
+}
+.skill_tech li:nth-of-type(2) .skill_bar > span{
+  animation-delay: 2s;
+}
+.skill_tech li:nth-of-type(3) .skill_bar > span{
+  animation-delay: 2.5s;
+}
+.skill_tech li:nth-of-type(4) .skill_bar > span{
+  animation-delay: 3s;
+}
+.skill_bar > span::after{
+  content: attr(data-progress);
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.skill_list .skill_text{
+  font-size: 14px;
+  line-height: 20px;
+  word-break: keep-all;
+}
+.skill_text em{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+@keyframes ani_skill{
+  from{
+    width: 0;
+  }
+  to{
+
+  }
+}
+@keyframes ani_skill_h2{
+  from{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 4페이지 */
+.portfolio{
+  position: relative;
+  overflow-y: scroll !important;
+  padding: 0 !important;
+  background: url(./image/background4.jpg) no-repeat top -70px center / cover;
+  z-index: 0;
+}
+.portfolio .headline{
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.portfolio .pf_index,
+.portfolio .pf_page{
+  height: 100vh;
+  padding: 80px;
+  box-sizing: border-box;
+}
+.portfolio .pf_thumb_wrap{
+  display: flex;
+  margin-top: 50px;
+}
+.pf_thumb_wrap .pf_thumbnail{
+  flex: 1;
+  margin: 0 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: .3s;
+}
+.pf_thumbnail > img{
+  width: 100%;
+  height: auto;
+}
+.pf_thumbnail .pf_thumb_info{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .7);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.pf_thumbnail:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+.pf_thumbnail:hover .pf_thumb_info{
+  opacity: 1;
+  visibility: visible;
+}
+.pf_thumb_info p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.pf_thumb_info p > em{
+  font-size: 24px;
+}
+.scroll_ani{
+  width: 40px;
+  height: 60px;
+  margin: 50px auto 0;
+  border: 3px solid #5C5C59;
+  border-radius: 20px;
+  position: relative;
+}
+.scroll_ani::after{
+  content: "SCROLL DOWN";
+  font-family: 'Hammersmith One', sans-serif;
+  color: #5C5C59;
+  width: 86px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+}
+.scroll_ani > span{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #5C5C59;
+  animation: scrolling 2s infinite;
+}
+@keyframes scrolling{
+  0%{}
+  95%{
+    top: calc(100% - 14px);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+/* 포트폴리오 각 페이지 */
+.portfolio .pf_page{
+  font-size: 0;
+}
+.page_Lside, .page_Rside{
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.pf_page .page_Lside{
+  width: 30%;
+  padding-right: 20px;
+}
+.pf_page .page_Rside{
+  width: 70%;
+}
+.pf_page .page_title{
+  font-size: 36px;
+  line-height: 50px;
+}
+.pf_page .page_title > em{
+  font-size: 50px;
+}
+.pf_page .page_info{
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  word-break: keep-all;
+}
+.page_contribution{
+  margin-top: 30px;
+}
+.page_contribution .contribution_btn{
+  height: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'NEXON Lv2 Gothic Bold';
+  cursor: pointer;
+}
+.contribution_btn::before{
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  vertical-align: middle;
+  margin-left: -5px;
+  transition: .3s;
+}
+.contribution_btn::after{
+  content: "\f107";
+  display: inline-block;
+  font-family: "FontAwesome";
+}
+.contribution_btn.active::before{
+  width: calc(100% - 170px);
+  margin-left: 0;
+}
+.contribution_btn.active::after{
+  content: "\f106";
+}
+.page_contribution .contribution_list{
+  display: none;
+  margin-top: 10px;
+  height: max-content;
+}
+.contribution_list .contribution_item{
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.contribution_item > dt{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.contribution_item > dd{
+  height: 80px;
+  overflow: hidden;
+}
+.contribution_item .dd_wrap{
+  transition: .3s;
+}
+.contribution_item .dd_wrap > span{
+  display: block;
+}
+.dd_wrap .dd_per{
+  width: 80px;
+  height: 80px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 80px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.dd_per[data-num="0"],
+.dd_per[data-num="30"]{
+  border: 1px solid;
+}
+.dd_per::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.contribution_btn.active + .contribution_list .dd_per::after{
+  animation: ani_dd 1s .5s both;
+}
+.dd_per[data-num="0"]::after{
+  height: 0;
+}
+.dd_per[data-num="30"]::after{
+  height: 30%;
+}
+.dd_per[data-num="98"]::after{
+  height: 98%;
+}
+.dd_per[data-num="100"]::after{
+  height: 100%;
+}
+#page1 .dd_per::after{
+  background-color: #08987F;
+}
+#page2 .dd_per::after{
+  background-color: #323A45;
+}
+#page3 .dd_per::after{
+  background-color: #1A96DE;
+}
+#page4 .dd_per::after{
+  background-color: #FFBB42;
+}
+
+@keyframes ani_dd{
+  from{
+    height: 0;
+  }
+  to{}
+}
+.dd_wrap .dd_info{
+  width: 80%;
+  height: 80px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.contribution_item .dd_wrap:hover{
+  transform: translateY(-81px);
+}
+
+.page_anchor_box{
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.page_anchor_box > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page_anchor_box .page_anchor{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.page_anchor_box:hover .page_anchor{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .3s;
+}
+.page_anchor .page_anchor_btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.page_anchor a,
+.page_anchor button{
+  display: block;
+  width: 300px;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  transition: .3s;
+  margin: 10px auto;
+}
+.page_anchor button{
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+.page_anchor a:hover,
+.page_anchor button:hover{
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* 5페이지 */
+.contact{
+  background: url(./image/background5.jpg) no-repeat center / cover;
+}
+.contact > *{
+  position: relative;
+  margin-left: 50%;
+}
+.contact .headline{
+  margin-top: 10vh;
+}
+.contact > a{
+  display: inline-block;
+  font-size: 50px;
+  font-family: 'Hammersmith One', sans-serif;
+  margin-top: 60px;
+  position: relative;
+  transition: .5s;
+}
+.contact > a::after{
+  content: "astralsoo@naver.com";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  color: #f37eb5;
+  overflow: hidden;
+  transition: .5s;
+}
+.contact > a:hover{
+  color: transparent;
+}
+.contact > a:hover::after{
+  width: 100%;
+}
+.contact .copyright{
+  position: absolute;
+  right: 80px;
+  bottom: 30px;
+  color: #aaa;
+}
+@keyframes ani_contact{
+  from{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
