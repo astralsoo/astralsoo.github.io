@@ -72,6 +72,7 @@
   transform: translateX(-50%);
   width: 72px;
   height: 180px;
+  z-index: 5;
   transition: .4s;
 }
 .category_list > a:hover .category_icon{
