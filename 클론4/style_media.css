@@ -29,6 +29,7 @@
   input[type='email'],
   input[type='tel'] {
     width: 130px;
+    font-size: 14px;
   }
 
   .service_list .service_item{
