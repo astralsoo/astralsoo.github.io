@@ -4,6 +4,20 @@ $(function(){
     $(".gnb_item").click(function(){
       $(".gnb_item").removeClass("active");
       $(this).addClass("active");
+      //스무스 스크롤링
+      let target = $(this).children().attr("href");
+      if(target === "#"){
+        $("html, body").animate({
+          'scrollTop': 0
+        }, 500);
+      }
+      else{
+        let h = $(target).offset().top;
+        $("html, body").animate({
+          'scrollTop': h
+        }, 500);
+      }
+      //모바일환경 gnb 숨기기
       if($(".header").hasClass("active")){
         window.setTimeout(
           function(){
