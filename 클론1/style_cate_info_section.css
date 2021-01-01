@@ -69,10 +69,10 @@
   position: absolute;
   top: 10px;
   left: 50%;
-/*   transform: translateX(-50%); */
+  transform: translateX(-50%);
   width: 72px;
   height: 180px;
-  z-index: 5;
+/*   z-index: 5; */
   transition: .4s;
 }
 .category_list > a:hover .category_icon{
