@@ -62,7 +62,7 @@
   background-color: #fff;
   position: relative;
   transition: .4s;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 .category_icon > img{
   content: '';
