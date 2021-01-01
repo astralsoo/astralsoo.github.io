@@ -215,6 +215,7 @@ footer .other_link{
   background-color: #1b1d2d;
   color: #fff;
   font-size: 20px;
+  text-align: center;
   cursor: pointer;
 }
 .share .share_modal{
