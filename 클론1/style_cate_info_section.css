@@ -62,14 +62,14 @@
   background-color: #fff;
   position: relative;
   transition: .4s;
-/*   overflow: hidden; */
+  overflow: hidden;
 }
 .category_icon > img{
   content: '';
   position: absolute;
   top: 10px;
   left: 50%;
-  transform: translateX(-50%);
+/*   transform: translateX(-50%); */
   width: 72px;
   height: 180px;
   z-index: 5;
