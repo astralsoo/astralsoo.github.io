@@ -130,7 +130,7 @@
   }
   .subscribe_form input[type='text'],
   .subscribe_form input[type='email']{
-    width: 205px;
+    width: 200px;
   }
   .address_map .address_box{
     left: 263px;
