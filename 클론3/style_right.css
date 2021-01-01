@@ -204,7 +204,7 @@
   margin-left: 60px;
   margin-bottom: 0;
   width: max-content;
-  width: fit-content;
+  white-space: nowrap;
   font-size: 15px;
 }
 .follow_user .user_profile .user_name:hover{
