@@ -350,6 +350,7 @@
   color: rgb(255, 187, 66);
 }
 .sns > a:hover > .fa{
+  -webkit-transform: rotate3d(0, 1, 0, 360deg);
   transform: rotate3d(0, 1, 0, 360deg);
 }
 .footer_wrap .copyright{
