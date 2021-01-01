@@ -79,7 +79,8 @@
     position: absolute;
     top: calc(100% + 5px);
     left: -60px;
-    width: 110px;
+    width: max-content;
+    padding: 0 5px;
     background-color: #000;
     border-top: 1px solid dodgerblue;
     display: none;
@@ -92,6 +93,7 @@
     height: 5px;
     top: -4px;
     left: 71px;
+    text-align: center;
     transform: rotate(45deg);
     border-top: 1px solid dodgerblue;
     border-left: 1px solid dodgerblue;
@@ -100,6 +102,9 @@
   }
   .lang_option > a{
     display: inline-block;
+  }
+  .lang_option > a:first-of-type{
+    margin-left: 0;
   }
   .lang_option > span{
     display: none;
