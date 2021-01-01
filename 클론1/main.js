@@ -215,10 +215,5 @@ $(function(){
       $(".page" + i + "> div:nth-child(" + j +")").find(".graph_bar").css("width", graph_w);
     }
   };
-  // 분야별보기 이미지 삽입
-  let items = $(".category_list > a");
-  for(let i = 1 ; i < items.length +1 ; i++){
-    $(".category_list > a:nth-child(" + i + ")").children(".category_icon").prepend("<img src='https://astralsoo.github.io/클론1/img/icon" + i + ".png'>");
-  };
 
 })
