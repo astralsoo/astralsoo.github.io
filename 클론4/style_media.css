@@ -28,8 +28,8 @@
   input[type='text'],
   input[type='email'],
   input[type='tel'] {
-    width: 130px;
-    font-size: 14px;
+    width: 120px;
+    font-size: 13px;
   }
 
   .service_list .service_item{
