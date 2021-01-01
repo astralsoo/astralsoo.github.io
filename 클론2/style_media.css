@@ -111,8 +111,9 @@
   }
 
   .gnb .search{
-    position: fixed;
-    top: 70px;
+    left: 100%;
+    right: auto;
+    top: 0;
     width: 100%;
   }
   
@@ -121,7 +122,6 @@
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    overflow: scroll;
     transition: .5s;
   }
   .main .gnb .gnb_header{
@@ -142,6 +142,7 @@
   }
   .gnb.active .gnb_list{
     display: block;
+    overflow-y: scroll;
   }
   .main .gnb .gnb_list_item{
     display: none;
