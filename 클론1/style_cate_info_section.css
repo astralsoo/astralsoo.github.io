@@ -65,21 +65,17 @@
   overflow: hidden;
 }
 .category_icon > img{
-  content: '';
-  position: absolute;
-  top: 10px;
-/*   left: 50%; */
-  transform: translateX(-50%);
+  display: inline-block;
   width: 72px;
   height: 180px;
-  z-index: 5;
+  margin-top: 8px;
   transition: .4s;
 }
 .category_list > a:hover .category_icon{
   background-color: #009F83;
 }
 .category_list > a:hover .category_icon > img{
-  top: -100px;
+  transform: translateY(-107px);
 }
 .category_list .category_title{
   display: block;
