@@ -83,6 +83,10 @@
     font-size: 13px;
     padding-left: 15px;
   }
+  
+  .content .content_wrap{
+    height: 370px !important;
+  }
 }
 
 @media screen and (max-width: 780px){
