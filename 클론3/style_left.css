@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 
+body{
+  font-family: "맑은고딕", "Malgun Gothic", sans-serif;
+}
+
 body::after{
   content: '';
   display: block;
