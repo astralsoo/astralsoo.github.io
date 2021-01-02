@@ -20,15 +20,23 @@ $(function(){
       }
     } // 선택된 언어 표시
 
-    if($(window).width() >= 1005){
-      $(".lang_btn").click(function(){
-        if($(".lang_btn").hasClass("active") === false){
+    $(".lang_btn").click(function(){
+      if($(".lang_btn").hasClass("active") === false){
+        if($(window).width() >= 1005){
           $(this).addClass("active");
+          $(".lang_option").attr("style", "");
           $(".lang_option > a:visible").fadeOut(100);
           $(".lang_option > a").delay(300).fadeIn();
           $(".lang_option > span").css("opacity", "0").css("visibility", "hidden");
         }
-        else{
+        else if($(window).width() < 1005){
+          $(this).addClass("active");
+          $(".lang_option").fadeIn();
+          $(".lang_option > a").css("display", "inline-block");
+        }
+      }
+      else{
+        if($(window).width() >= 1005){
           $(this).removeClass("active");
           $(".lang_option > a:visible").fadeOut();
           for(let i=0 ; i <=5 ; i++){
@@ -38,7 +46,14 @@ $(function(){
           }
           $(".lang_option > span").css("opacity", "1").css("visibility", "visible");
         }
-      })
+        else if($(window).width() < 1005){
+          $(this).removeClass("active");
+          $(".lang_option").fadeOut();
+        }
+      }
+    })
+
+    if($(window).width() >= 1005){
       $(".lang_option > span").click(function(){
         if($(".lang_btn").hasClass("active") === false){
           $(this).addClass("active");
@@ -50,20 +65,7 @@ $(function(){
       })
       let currentLang = $(".lang").attr("lang");
       $(".lang_option > span").attr("title", "Selected language : "+currentLang);
-    } //1022px 초과일 때
-
-    if($(window).width() < 1005){
-      $(".lang_btn").click(function(){
-        if($(".lang_btn").hasClass("active") === false){
-          $(this).addClass("active");
-          $(".lang_option").fadeIn();
-        }
-        else{
-          $(this).removeClass("active");
-          $(".lang_option").fadeOut();
-        }
-      })
-    } //max-width 1022px일때 
+    }
   }
 
   // gnb 호버 기능
