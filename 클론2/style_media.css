@@ -50,6 +50,10 @@
     transform: none;
     transition: none;
   }
+  
+  .lang .lang_option{
+    display: inline-block;
+  }
 
   .brands_logo_slide_wrap{
     margin: 20px auto;
@@ -61,10 +65,10 @@
     height: 70px;
   }
   .header_top .stock{
-    display: none;
+    display: none !important;
   }
   .header_top .menubar{
-    display: block;
+    display: block !important;
     left: 20px;
     cursor: pointer;
   }
@@ -108,6 +112,8 @@
   }
   .lang_option > span{
     display: none;
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 
   .gnb .search{
@@ -121,7 +127,7 @@
     top: 70px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 70px) !important;
     transition: .5s;
   }
   .main .gnb .gnb_header{
