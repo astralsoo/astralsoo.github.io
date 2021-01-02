@@ -5,6 +5,10 @@ html{
   scroll-behavior: smooth;
 }
 
+body{
+  font-family: "맑은고딕", "Malgun Gothic", sans-serif;
+}
+
 body > section{
   width: calc(100% - 100px);
 }
