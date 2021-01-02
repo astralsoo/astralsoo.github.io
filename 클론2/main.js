@@ -282,5 +282,10 @@ $(function(){
       $(".to_top").fadeIn();
     }
   })
+  
+  // 브라우저 리사이징할때 새로고침
+  $(window).resize(function(){
+    location.reload();
+  })
 
 })
