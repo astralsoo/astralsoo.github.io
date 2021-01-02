@@ -131,11 +131,14 @@ $(function(){
       else if(currheight < -50 && currWidth < 1005){
         $("header").css("background-color", "rgba(0, 0, 0, .85)");
         $("header").mouseenter(function(){
-          null;
+          $(".menubar").css("display", "block");
         });
       }
       else if(currheight > -100 && currWidth < 1005){
         $("header").css("background-color", "#000");
+        $("header").mouseenter(function(){
+          $(".menubar").css("display", "block");
+        });
       }
       else if(currheight > -100 && currWidth >= 1005){
         ShowHD();
@@ -148,13 +151,10 @@ $(function(){
 
   // 1022px미만 햄버거버튼 작동 기능
   let Gnb_Menubar = function(){
-    let currWidth = $(window).width();
-    if(currWidth < 1005){
-      $(".menubar").click(function(){
-        $(".gnb").toggleClass("active");
-        $(".menubar .fa").toggleClass("fa-bars").toggleClass("fa-times");
-      })
-    }
+    $(".menubar").click(function(){
+      $(".gnb").toggleClass("active");
+      $(".menubar .fa").toggleClass("fa-bars").toggleClass("fa-times");
+    })
   }
 
   // 메인 배경 슬라이드 기능
