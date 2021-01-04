@@ -114,10 +114,10 @@ $(function(){
       if($(this).hasClass("active")){
         if($(this).hasClass("open")){
           for(let i = 1; i<=$(".curr_search > a").length ; i++){
-            function getRandomNum(min, max) {
+            let getRandomNum = function(min, max) {
               return Math.floor(Math.random() * (max - min) + min) + "%";
             }
-            function getRandomColor(max){
+            let getRandomColor = function(max){
               let arr_color = ["#c6679d", "#cd37c5", "#c5952b", "#59b576", "#19887c", "#dc346c", "#9dae05", "#32f5c7", "#71fb1e", "#bebccc"];
               let randomIndex = Math.floor(Math.random() * Math.floor(max));
               return arr_color[randomIndex];
