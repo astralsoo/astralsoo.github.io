@@ -64,6 +64,7 @@
   }
   .contribution_item > dt{
     font-size: 16px;
+    letter-spacing: -1px;
   }
 }
 
