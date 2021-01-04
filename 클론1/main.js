@@ -158,6 +158,23 @@ $(function(){
         }
       }
     })
+    //리사이징 대응
+    $(window).resize(function(){
+      if(window.innerWidth >= 780){
+        $(".content_wrap").attr("style", "");
+      }
+      else if(window.innerWidth < 780){
+        if($(".ctt_page.page1").hasClass("active")){
+          $(".content_wrap").css("height", "800px");
+        }
+        if($(".ctt_page.page2").hasClass("active")){
+          $(".content_wrap").css("height", "940px");
+        }
+        if($(".ctt_page.page3").hasClass("active")){
+          $(".content_wrap").css("height", "940px");
+        }
+      }
+    })
   }
 
   // 기타 작은 버튼 기능
