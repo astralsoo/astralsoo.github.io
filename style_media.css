@@ -268,15 +268,6 @@
 
 @media screen and (max-width: 1025px) and
 (min-width: 986px) and
-(max-height: 699px){
-  .skill_list .skill_text{
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-@media screen and (max-width: 1025px) and
-(min-width: 986px) and
 (max-height: 640px){
   .pf_page .page_Lside{
     padding-right: 10px;
