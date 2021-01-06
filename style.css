@@ -18,13 +18,14 @@
 
 html{
   scroll-behavior: smooth;
-  overflow: hidden;
 }
-
+html, body{
+  overflow: hidden;
+  position: relative;
+}
 body{
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   font-family: 'Handon3gyeopsal300g';
 }
 h1, h2, h3{
