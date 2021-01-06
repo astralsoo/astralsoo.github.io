@@ -169,14 +169,24 @@ $(function(){
     $(".gnb_item:nth-of-type(5)").click(function(){
       To_5th();
     })
+    
     //스킬바 각각의 width값
     let tech_li = ".skill_tech .skill_list > li"
     for(let i = 1 ; i < $(tech_li).length + 1 ; i++){
       let w = $(tech_li+":nth-of-type("+i+") .skill_bar > span").attr("data-progress");
       $(tech_li+":nth-of-type("+i+") .skill_bar > span").css("width", w);
     }
+    
+    //hover 불가한 상황(모바일 태블릿)에서의 기여도 클릭 지원
+    $(".dd_per").click(function(){
+      $(".dd_wrap").attr("style", "");
+      $(this).parent(".dd_wrap").css("transform", "translateY(-81px)");
+    })
+    $(".dd_info").click(function(){
+      $(this).parent(".dd_wrap").css("transform", "translateY(0)");
+    })
+    
   });
-
 
 
 });
