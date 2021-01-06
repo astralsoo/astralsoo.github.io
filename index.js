@@ -157,6 +157,9 @@ $(function(){
     $(".gnb_item:nth-of-type(1)").click(function(){
       To_1st();
     })
+    $(".main").on("swipeleft", function(){
+      To_1st();
+    })
     $(".gnb_item:nth-of-type(2)").click(function(){
       To_2nd();
     })
