@@ -597,13 +597,14 @@
     window.onload = function(){
     $("#loading").fadeOut("fast");
     };
+    
     $(".dd_per").click(function(){
       $(".dd_wrap").attr("style", "");
       $(this).parent(".dd_wrap").css("transform", "translateY(-81px)");
-    })
+    });
     $(".dd_info").click(function(){
-      $(".dd_wrap").attr("style", "");
-    })
+      $(this).parent(".dd_wrap").attr("style", "");
+    });
   </script>
 </body>
 </html>
