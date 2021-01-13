@@ -6,6 +6,13 @@ $(function(){
   ){
     alert("본 페이지는 익스플로러에서 제대로 작동하지 않을 수 있습니다.");
   }
+  //사파리 호버 클릭 지원
+  if(agent.indexOf("safari") != -1){
+    $(".skill_wrap h3").click(function(){
+      $(this).toggleClass("active");
+      $(this).siblings(".skill_list").slideToggle();
+    })
+  }
 
   //각 페이지로 이동하는 함수
   let To_1st = function(){
@@ -176,12 +183,6 @@ $(function(){
       let w = $(tech_li+":nth-of-type("+i+") .skill_bar > span").attr("data-progress");
       $(tech_li+":nth-of-type("+i+") .skill_bar > span").css("width", w);
     }
-    
-    //스킬 섹션 버튼 슬라이드
-    $(".skill_wrap h3").click(function(){
-      $(this).toggleClass("active");
-      $(this).siblings(".skill_list").slideToggle();
-    })
     
   });
 
