@@ -691,7 +691,6 @@ em{
   box-sizing: border-box;
 }
 .contribution_item .dd_wrap:hover{
-  -webkit-transform: translateY(-81px);
   transform: translateY(-81px);
 }
 
