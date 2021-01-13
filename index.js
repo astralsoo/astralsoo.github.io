@@ -177,6 +177,12 @@ $(function(){
       $(tech_li+":nth-of-type("+i+") .skill_bar > span").css("width", w);
     }
     
+    //스킬 섹션 버튼 슬라이드
+    $(".skill_wrap h3").click(function(){
+      $(this).toggleClass("active");
+      $(this).siblings(".skill_list").slideToggle();
+    })
+    
   });
 
 
