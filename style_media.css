@@ -357,6 +357,21 @@
     margin: 0;
   }
 
+  .skill{
+    background-position: right center;
+  }
+  .skill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, .5);
+  }
+  .skill_wrap{
+    position: relative;
+  }
   .skill_wrap:first-of-type{
     float: none;
     width: 100%;
@@ -383,22 +398,6 @@
 }
 
 @media screen and (max-width: 740px){
-  .skill{
-    background-position: right center;
-  }
-  .skill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, .5);
-  }
-  .skill_wrap{
-    position: relative;
-  }
-
   .portfolio{
     background-position: top -130px right -150px;
   }
