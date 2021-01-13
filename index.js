@@ -177,6 +177,12 @@ $(function(){
       $(tech_li+":nth-of-type("+i+") .skill_bar > span").css("width", w);
     }
     
+    //사파리 호버 클릭 지원
+    $(".skill_wrap h3").click(function(){
+      $(this).toggleClass("active");
+      $(this).siblings(".skill_list").slideToggle();
+    })
+    
   });
 
 
