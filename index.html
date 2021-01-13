@@ -349,7 +349,7 @@
               <div class="contribution_item">
                 <dt>Design</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="0" style="border-color: #323A45; color: #323A45;">0%</span>
                     <span class="dd_info">
                       전체 디자인 및 태블릿, 모바일 대응 디자인 모두 모방
@@ -360,7 +360,7 @@
               <div class="contribution_item">
                 <dt>HTML Mark Up</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="100">100%</span>
                     <span class="dd_info">
                       기존 마크업을 참고하지 않고 모두 직접 작성
@@ -371,7 +371,7 @@
               <div class="contribution_item">
                 <dt>CSS Styling</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="98">98%</span>
                     <span class="dd_info">
                       프리소스(normalize)를 제외하고 모두 직접 작성
@@ -382,7 +382,7 @@
               <div class="contribution_item">
                 <dt>JS/JQuery Coding</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="100">100%</span>
                     <span class="dd_info">
                       모두 직접 작성
@@ -432,7 +432,7 @@
               <div class="contribution_item">
                 <dt>Design</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="0" style="border-color: #1A96DE; color: #1A96DE;">0%</span>
                     <span class="dd_info">
                       전체 디자인 및 태블릿, 모바일 대응 디자인 모두 모방
@@ -443,7 +443,7 @@
               <div class="contribution_item">
                 <dt>HTML Mark Up</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="100">100%</span>
                     <span class="dd_info">
                       기존 마크업을 참고하지 않고 모두 직접 작성
@@ -454,7 +454,7 @@
               <div class="contribution_item">
                 <dt>CSS Styling</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="98">98%</span>
                     <span class="dd_info">
                       프리소스(normalize)를 제외하고 모두 직접 작성
@@ -465,7 +465,7 @@
               <div class="contribution_item">
                 <dt>JS/JQuery Coding</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="98">98%</span>
                     <span class="dd_info">
                       프리소스(autosize Library)를 제외하고 모두 직접 작성
@@ -515,7 +515,7 @@
               <div class="contribution_item">
                 <dt>Design</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="30" style="border-color: #FFBB42; color: #FFBB42;">30%</span>
                     <span class="dd_info">
                       프리소스에 부가적으로 반응형 웹 디자인과 인터랙티브 효과를 추가
@@ -526,7 +526,7 @@
               <div class="contribution_item">
                 <dt>HTML Mark Up</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="100">100%</span>
                     <span class="dd_info">
                       모두 직접 작성
@@ -537,7 +537,7 @@
               <div class="contribution_item">
                 <dt>CSS Styling</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="98">98%</span>
                     <span class="dd_info">
                       프리소스(normalize)를 제외하고 모두 직접 작성
@@ -548,7 +548,7 @@
               <div class="contribution_item">
                 <dt>JS/JQuery Coding</dt>
                 <dd>
-                  <div class="dd_wrap">
+                  <div class="dd_wrap" onclick="">
                     <span class="dd_per" data-num="100">100%</span>
                     <span class="dd_info">
                       모두 직접 작성
@@ -595,20 +595,8 @@
 
   <script>
     window.onload = function(){
-    $("#loading").fadeOut("fast");
+      $("#loading").fadeOut("fast");
     };
-    
-    //hover 불가한 상황(모바일 태블릿)에서의 기여도 클릭 지원
-    //let agent = navigator.userAgent.toLowerCase();
-    //if(agent.indexOf("safari") != -1){
-    //  $(".dd_per").click(function(){
-    //    $(".dd_wrap").attr("style", "");
-    //    $(this).parent(".dd_wrap").css("transform", "translateY(-81px)");
-    //  })
-    //  $(".dd_info").click(function(){
-    //    $(this).parent(".dd_wrap").css("transform", "translateY(0)");
-    //  })
-    //}
   </script>
 </body>
 </html>
