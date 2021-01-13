@@ -346,7 +346,7 @@
   .about .headline{
     width: 100%;
     padding-top: 0;
-    background-position: top 25px left 385px;
+    background-position: top 25px left 400px;
     background-size: 80px 80px;
   }
   .about .about_content{
@@ -370,7 +370,7 @@
   .skill .headline{
     width: 100%;
     padding-top: 0;
-    background-position: top 33px right 400px;
+    background-position: top 33px right 415px;
     background-size: 80px 80px;
   }
   .skill_list > li{
