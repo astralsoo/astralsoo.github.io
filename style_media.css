@@ -437,18 +437,25 @@
     font-size: 32px;
     line-height: 48px;
   }
+  
   .about .headline{
     background-position: top 15px left 345px;
   }
   .about .about_wrap{
     margin-top: 10px;
   }
+  
   .skill .headline{
     background-position: top 22px right 360px;
   }
+  
   .portfolio .headline{
     padding-top: 40px;
   }
+  .contribution_item > dt{
+    font-size: 14px;
+  }
+  
   .contact > a {
     font-size: 32px;
   }
