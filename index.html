@@ -599,13 +599,17 @@
     };
     
     //hover 불가한 상황(모바일 태블릿)에서의 기여도 클릭 지원
-    $(".dd_per").click(function(){
-      $(".dd_wrap").attr("style", "");
-      $(this).parent(".dd_wrap").css("transform", "translateY(-81px)");
-    })
-    $(".dd_info").click(function(){
-      $(this).parent(".dd_wrap").css("transform", "translateY(0)");
-    })
+    //사파리 호버 클릭 지원
+    let agent = navigator.userAgent.toLowerCase();
+    if(agent.indexOf("safari") != -1){
+      $(".dd_per").click(function(){
+        $(".dd_wrap").attr("style", "");
+        $(this).parent(".dd_wrap").css("transform", "translateY(-81px)");
+      })
+      $(".dd_info").click(function(){
+        $(this).parent(".dd_wrap").css("transform", "translateY(0)");
+      })
+    }
   </script>
 </body>
 </html>
