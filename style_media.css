@@ -593,7 +593,10 @@
   .slide_wrap > section,
   .portfolio .pf_index,
   .portfolio .pf_page{
-    padding: 40px 20px;
+    padding: 40px 20px !important;
+  }
+  .slide_wrap > .portfolio{
+    padding: 0 !important;
   }
   .headline {
     font-size: 28px;
@@ -669,12 +672,6 @@
     width: 30px;
     height: 45px;
     margin: 30px auto 0;
-  }
-}
-
-@media screen and (max-height: 600px){
-  .about_list > li{
-    margin-bottom: 20px;
   }
 }
 
@@ -1201,7 +1198,10 @@
 }
 
 @media screen and (max-width: 550px) and
-(min-height: 600px){
+(min-height: 550px){
+  .portfolio .headline{
+    padding-top: 0;
+  }
   .portfolio .pf_thumb_wrap{
     display: block;
     text-align: center;
@@ -1212,14 +1212,14 @@
     display: inline-block;
     width: 30%;
     min-width: 150px;
-    margin: 0 10px;
+    margin: 0 5px;
     vertical-align: top;
   }
   .pf_thumb_wrap .pf_thumbnail:first-of-type {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .pf_thumb_wrap .pf_thumbnail:last-of-type {
-    margin-right: 10px;
+    margin-right: 5px;
   }
   .pf_thumb_info p{
     font-size: 14px;
@@ -1248,6 +1248,13 @@
     line-height: 18px;
     word-break: keep-all;
     box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 451px) and
+(max-height: 600px){
+  .about_list > li{
+    margin-bottom: 20px;
   }
 }
 
