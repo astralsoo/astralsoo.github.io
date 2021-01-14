@@ -1260,6 +1260,10 @@
   .portfolio .headline{
     padding-top: 0;
   }
+}
+
+@media screen and (max-width: 450px) and
+(min-height: 650px){
   .portfolio .pf_page{
     padding-top: 10vh !important;
   }
