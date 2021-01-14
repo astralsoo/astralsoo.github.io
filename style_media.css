@@ -1273,6 +1273,9 @@
   .pf_page .page_Lside{
     padding-top: 10vh;
   }
+  .page_contribution{
+    top: calc(10vh + 4px);
+  }
 }
 
 @media screen and (max-width: 450px) and
