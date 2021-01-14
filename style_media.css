@@ -1270,8 +1270,8 @@
 
 @media screen and (max-width: 450px) and
 (min-height: 650px){
-  .portfolio .pf_page{
-    padding-top: 10vh !important;
+  .pf_page .page_Lside{
+    padding-top: 10vh;
   }
 }
 
