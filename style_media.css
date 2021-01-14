@@ -1256,10 +1256,14 @@
 }
 
 @media screen and (max-width: 450px) and
-(min-height: 550px){
+(min-height: 650px){
   .portfolio .headline{
     padding-top: 0;
   }
+}
+
+@media screen and (max-width: 450px) and
+(min-height: 550px){
   .pf_thumb_wrap .pf_thumbnail{
     margin: 0 5px;
   }
