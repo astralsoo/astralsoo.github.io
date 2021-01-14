@@ -1256,7 +1256,7 @@
 }
 
 @media screen and (max-width: 450px) and
-(min-height: 650px){
+(max-height: 650px){
   .portfolio .headline{
     padding-top: 0;
   }
