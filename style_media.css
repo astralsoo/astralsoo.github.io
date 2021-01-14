@@ -89,7 +89,8 @@
     padding: 60px;
   }
   .portfolio{
-    background-position: top -120px right -40px;
+    background-position: bottom -35px right;
+    background-size: auto 120%;
   }
   .page_anchor_box{
     height: 95%;
