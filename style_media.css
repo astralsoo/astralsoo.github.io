@@ -399,9 +399,6 @@
 }
 
 @media screen and (max-width: 740px){
-  .portfolio{
-    background-position: top -130px right -150px;
-  }
   .pf_page .page_info {
     font-size: 14px;
     line-height: 20px;
