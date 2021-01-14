@@ -1198,7 +1198,7 @@
 }
 
 @media screen and (max-width: 550px) and
-(min-height: 600px){
+(min-height: 550px){
   .portfolio .pf_thumb_wrap{
     display: block;
     text-align: center;
