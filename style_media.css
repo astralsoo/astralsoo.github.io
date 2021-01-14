@@ -1260,6 +1260,9 @@
   .portfolio .headline{
     padding-top: 0;
   }
+  .portfolio .pf_page{
+    padding-top: 15vh !important;
+  }
 }
 
 @media screen and (max-width: 450px) and
