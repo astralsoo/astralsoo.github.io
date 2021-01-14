@@ -89,7 +89,7 @@
     padding: 60px;
   }
   .portfolio{
-    background-position: bottom center;
+    background-position: bottom -20px center;
     background-size: contain;
   }
   .page_anchor_box{
