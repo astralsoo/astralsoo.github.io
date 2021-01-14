@@ -1302,3 +1302,10 @@
     background-position: right -50px center;
   }
 }
+
+@media screen and (max-width: 400px) and
+(max-height: 800px){
+  .portfolio .pf_index {
+    padding: 40px 0 !important;
+  }
+}
