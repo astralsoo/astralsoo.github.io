@@ -1198,10 +1198,7 @@
 }
 
 @media screen and (max-width: 550px) and
-(min-height: 550px){
-  .portfolio .headline{
-    padding-top: 0;
-  }
+(min-height: 600px){
   .portfolio .pf_thumb_wrap{
     display: block;
     text-align: center;
@@ -1212,14 +1209,14 @@
     display: inline-block;
     width: 30%;
     min-width: 150px;
-    margin: 0 5px;
+    margin: 0 10px;
     vertical-align: top;
   }
   .pf_thumb_wrap .pf_thumbnail:first-of-type {
-    margin-left: 5px;
+    margin-left: 10px;
   }
   .pf_thumb_wrap .pf_thumbnail:last-of-type {
-    margin-right: 5px;
+    margin-right: 10px;
   }
   .pf_thumb_info p{
     font-size: 14px;
@@ -1259,7 +1256,10 @@
 }
 
 @media screen and (max-width: 450px) and
-(min-height: 600px){
+(min-height: 550px){
+  .portfolio .headline{
+    padding-top: 0;
+  }
   .pf_thumb_wrap .pf_thumbnail{
     margin: 0 5px;
   }
@@ -1272,7 +1272,7 @@
 }
 
 @media screen and (max-width: 450px) and
-(max-height: 600px){
+(max-height: 550px){
   .portfolio .pf_thumb_wrap {
     width: 360px;
     margin: 0 auto;
