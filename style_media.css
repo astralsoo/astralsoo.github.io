@@ -675,6 +675,12 @@
   }
 }
 
+@media screen and (max-height: 550px){
+  .about .about_content{
+    padding-top: 0;
+  }
+}
+
 @media screen and (max-height: 520px){
   .gnb{
     bottom: 40px;
