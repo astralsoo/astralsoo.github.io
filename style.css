@@ -417,7 +417,6 @@ em{
   overflow-y: scroll !important;
   padding: 0 !important;
   background: url(./image/background4.jpg) no-repeat center / cover;
-  background-size: 1512px 972px;
   z-index: 0;
 }
 .portfolio .headline{
