@@ -8,6 +8,10 @@
   .about_wrap:last-of-type{
     width: 60%;
   }
+  .portfolio{
+    background-position: bottom right;
+    background-size: auto 90%;
+  }
 }
 
 @media screen and (max-width: 1235px){
