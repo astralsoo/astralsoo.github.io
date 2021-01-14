@@ -161,9 +161,6 @@
   .pf_page .page_info{
     margin-top: 10px;
   }
-  .page_anchor_box{
-    height: 100%;
-  }
   .page_contribution{
     position: absolute;
     top: 42px;
@@ -838,6 +835,13 @@
   .page_anchor_box{
     width: 80%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 985px) and
+(max-height: 800px){
+  .page_anchor_box{
+    height: 100%;
   }
 }
 
