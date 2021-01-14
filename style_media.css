@@ -475,7 +475,7 @@
     width: 20px;
   }
   .page_anchor_box{
-    height: auto;
+    height: auto !important;
     margin-top: 30px;
   }
   .contact > *{
