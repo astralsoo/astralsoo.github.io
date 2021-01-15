@@ -55,7 +55,7 @@ $(function(){
     $(".contribution_btn").click(function(){
       $(this).toggleClass("active");
       $(this).siblings(".contribution_list").delay(500).slideToggle();
-      $(".hover_icon").toggleClass("active");
+      $(this).siblings(".hover_icon").toggleClass("active");
       if($(this).hasClass("active")){
         $(this).attr("title", "기여도 접기");
       }
