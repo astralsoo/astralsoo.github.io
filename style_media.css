@@ -271,7 +271,7 @@
   }
   .skill_wrap:last-of-type{
     width: 70%;
-    height: calc(100% - 25px);
+    height: calc(100vh - 150px);
     padding-right: 15px;
     padding-bottom: 0;
     overflow-y: auto;
@@ -380,7 +380,7 @@
   .skill_wrap:last-of-type{
     float: right;
     width: 100%;
-    height: calc(100% - 130px);
+    height: calc(100vh - 250px);
     padding-right: 0;
   }
   .skill .headline{
@@ -445,6 +445,9 @@
   
   .skill .headline{
     background-position: top 22px right 360px;
+  }
+  .skill_wrap:last-of-type{
+    height: calc(100vh - 200px);
   }
   
   .portfolio .headline{
@@ -1091,6 +1094,13 @@
   .skill .headline{
     background-position: top -10px right 65px;
     background-size: 100px 100px;
+  }
+}
+@media screen and (max-width: 890px) and
+(min-width: 800px) and
+(max-height: 480px){
+  .skill_wrap:last-of-type{
+    height: calc(100vh - 120px);
   }
 }
 
