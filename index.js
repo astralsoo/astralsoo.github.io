@@ -190,8 +190,10 @@ $(function(){
         $(".skill_list").css("display", "block");
       }
       else if(window.innerWidth < 890){
-        $(".skill_bn .skill_list, .skill_lang .skill_list").css("display", "none");
-        $(".skill_bn > h3, .skill_lang > h3").removeClass("active");
+        $(".skill_bn .skill_list").css("display", "none");
+        $(".skill_lang .skill_list").css("display", "none");
+        $(".skill_bn > h3").removeClass("active");
+        $(".skill_lang > h3").removeClass("active");
         $(".skill_tech > h3").addClass("active");
       }
     }) //리사이징 대응
