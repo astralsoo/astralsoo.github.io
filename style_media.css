@@ -633,6 +633,9 @@
     background-size: 45px 45px;
     background-position: top -5px right 50px;
   }
+  .skill_wrap:last-of-type{
+    height: calc(100vh - 180px);
+  }
 
   .page_contribution .contribution_btn {
     font-size: 16px;
