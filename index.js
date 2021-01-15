@@ -178,11 +178,21 @@ $(function(){
       $(tech_li+":nth-of-type("+i+") .skill_bar > span").css("width", w);
     }
     
-    //각 스킬 제목 버튼 클릭기능
+    //890px미만일때 각 스킬 제목 버튼 클릭기능
     $(".skill_wrap h3").click(function(){
-      $(this).toggleClass("active");
-      $(this).siblings(".skill_list").slideToggle();
+      if(window.innerWidth < 890){
+        $(this).toggleClass("active");
+        $(this).siblings(".skill_list").slideToggle();
+      }
     })
+    $(window).resize(function(){
+      if(window.innerWidth >= 890){
+        $(".skill_list").css("display", "block");
+      }
+      else if(window.innerWidth < 890){
+        $(".skill_bn .skill_list, .skill_lang .skill_list").css("display", "none");
+      }
+    }) //리사이징 대응
     
   });
 
