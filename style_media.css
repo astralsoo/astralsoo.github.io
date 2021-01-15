@@ -165,8 +165,7 @@
     position: absolute;
     top: 42px;
     right: 0;
-    width: 40%;
-    min-width: 300px;
+    width: 300px;
     margin-top: 0;
     z-index: 10;
   }
@@ -216,6 +215,10 @@
   .dd_wrap .dd_info{
     font-size: 14px;
     line-height: 20px;
+  }
+  .hover_icon{
+    top: 105px;
+    left: 60px;
   }
 
   .contact .copyright{
@@ -510,10 +513,13 @@
     font-size: 16px;
   }
   .page_contribution{
-    min-width: 280px;
+    width: 280px;
   }
   .dd_wrap .dd_info{
     font-size: 12px;
+  }
+  .hover_icon{
+    left: 55px;
   }
 
   .contact > a{
@@ -523,10 +529,14 @@
 
 @media screen and (max-width: 475px){
   .page_contribution{
-    min-width: 250px;
+    width: 250px;
   }
   .page_contribution .contribution_list{
     padding: 0 8px 15px 0;
+  }
+  .hover_icon{
+    top: 80px;
+    left: 35px;
   }
 
   .contact > *{
