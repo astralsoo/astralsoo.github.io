@@ -216,7 +216,7 @@ em{
 }
 
 .about .headline{
-  width: 290px;
+  width: 295px;
   margin: 0 auto;
   padding-top: 50px;
   background: url(./image/memoticon1.png) no-repeat top -15px left 100px;
@@ -285,7 +285,7 @@ em{
   box-sizing: border-box;
 }
 .skill_wrap .headline{
-  width: 310px;
+  width: 315px;
   margin: 0 auto;
   padding-top: 50px;
   background: url(./image/memoticon2.png) no-repeat top -10px right 100px;
