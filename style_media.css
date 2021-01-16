@@ -135,7 +135,7 @@
     background-position: top left 85px;
   }
   .skill .headline{
-    width: 250px;
+    width: 255px;
     background-position: top right 85px;
   }
 }
@@ -270,7 +270,7 @@
     width: 30%;
   }
   .skill .headline{
-    width: 205px;
+    width: 210px;
     background-position: top 20px right 65px;
   }
   .skill_wrap:last-of-type{
