@@ -151,10 +151,22 @@ $(function(){
       }
     });
   }
+  
+  //포트폴리오 각 썸네일 클릭시 부드럽게 이동
+  let pf_Thumbnail = function(){
+    $(".pf_thumbnail").click(function(){
+      let target = $(this).attr("href");
+      let h = $(target).offset().top;
+      $("#portfolio").animate({
+        'scrollTop': h
+      }, 500);
+    })
+  }
 
   jQuery(document).ready(function(){
     Contribution_btn();
     wheel_event();
+    pf_Thumbnail();
     $(".gnb_item:nth-of-type(1)").click(function(){
       To_1st();
     })
