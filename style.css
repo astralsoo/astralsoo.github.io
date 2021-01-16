@@ -75,7 +75,7 @@ em{
   width: 300px;
   height: max-content;
   left: 50%;
-  bottom: calc(var(--vh, 1vh) * 9);
+  bottom: 70px;
   transform: translateX(-50%);
   z-index: 99;
   transition: .5s;
@@ -169,7 +169,7 @@ em{
 }
 .main > h1{
   position: absolute;
-  top: 30vh;
+  top: calc(var(--vh, 1vh) * 30);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -431,7 +431,7 @@ em{
 }
 .portfolio .pf_index,
 .portfolio .pf_page{
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 80px;
   box-sizing: border-box;
 }
@@ -798,7 +798,7 @@ em{
   margin-left: 50%;
 }
 .contact .headline{
-  margin-top: 10vh;
+  margin-top: calc(var(--vh, 1vh) * 10);
 }
 .contact > a{
   display: inline-block;
