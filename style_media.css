@@ -446,6 +446,9 @@
   .about .about_wrap{
     margin-top: 10px;
   }
+  .about .about_content{
+    padding-top: 0;
+  }
   
   .skill .headline{
     background-position: top 22px right 360px;
