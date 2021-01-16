@@ -71,7 +71,7 @@ em{
   width: 300px;
   height: max-content;
   left: 50%;
-  bottom: 80px;
+  bottom: calc(var(--vh, 1vh) * 8);
   transform: translateX(-50%);
   z-index: 99;
   transition: .5s;
