@@ -16,6 +16,10 @@
   font-style: normal;
 }
 
+:root{
+  --vh: 1vh;
+}
+
 html,
 body{
   overflow-x: hidden;
@@ -130,7 +134,7 @@ em{
 /* 전체 페이지 정렬 */
 .slide_wrap{
   width: 500%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   font-size: 0;
   position: relative;
   transition: 1s;
