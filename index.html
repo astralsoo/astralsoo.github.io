@@ -608,6 +608,15 @@
     window.onload = function(){
       $("#loading").fadeOut("fast");
     };
+    let setNewVH = function(){
+      let vh = window.innerHeight * 0.01;
+      let prop_vh = vh + "px";
+      document.documentElement.style.setProperty("--vh", prop_vh);
+    };
+    setNewVH();
+    $(window).resize(function(){
+      setNewVH();
+    });
   </script>
 </body>
 </html>
