@@ -1312,7 +1312,7 @@
     padding-top: calc(var(--vh, 1vh) * 10);
   }
   .page_contribution{
-    top: calc((var(--vh, 1vh)*30) + 6px);
+    top: calc((var(--vh, 1vh)*10) + 6px);
   }
 }
 
