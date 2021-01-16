@@ -244,7 +244,7 @@
 
 @media screen and (max-width: 890px){
   .gnb{
-    bottom: calc(var(--vh, 1vh) * 7);
+    bottom: 60px;
   }
   .main > h1{
     font-size: 32px;
@@ -426,7 +426,7 @@
     padding: 40px;
   }
   .gnb{
-    bottom: calc(var(--vh, 1vh) * 5);
+    bottom: 40px;
   }
   .main > h1 {
     font-size: 28px;
@@ -667,7 +667,7 @@
 
 @media screen and (max-height: 700px){
   .gnb{
-    bottom: calc(var(--vh, 1vh) * 7);
+    bottom: 50px;
   }
   .pf_page .page_title {
     font-size: 28px;
@@ -701,7 +701,7 @@
 
 @media screen and (max-height: 520px){
   .gnb{
-    bottom: calc(var(--vh, 1vh) * 6);
+    bottom: 40px;
   }
   .portfolio .pf_thumb_wrap{
     padding-top: 20px;
