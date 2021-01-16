@@ -478,8 +478,9 @@
     background-size: contain;
   }
 
-  .about_list > li > a {
-    margin: 5px 0 0 24px;
+  .about_list > li > a{
+    display: block;
+    margin: 5px 0 0 29px;
   }
 }
 
@@ -490,6 +491,10 @@
   .about_list > li > .fa{
     width: 20px;
   }
+  .about_list > li > a{
+    margin: 5px 0 0 24px;
+  }
+  
   .page_anchor_box{
     height: auto !important;
     margin-top: 15px;
@@ -574,7 +579,7 @@
     word-break: keep-all;
   }
   .about_list > li > a{
-    margin: -30px 0 0 24px;
+    margin: -20px 0 0 24px;
   }
   
   .skill .headline{
@@ -628,9 +633,7 @@
   .main > h1 > em {
     font-size: 32px;
   }
-  .about .about_wrap{
-    margin-top: 0;
-  }
+  
   .about .headline {
     background-size: 45px 45px;
     background-position: top -5px left 50px;
