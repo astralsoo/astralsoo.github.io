@@ -670,6 +670,11 @@
   .contact > a{
     font-size: 28px;
   }
+  
+  .to_top{
+    right: 10px;
+    bottom: 70px;
+  }
 }
 
 
