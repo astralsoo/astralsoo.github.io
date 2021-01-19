@@ -10,6 +10,7 @@ $(function(){
   //각 페이지로 이동하는 함수
   let To_1st = function(){
     $(".slide_wrap").css("transform", "translateX(0)");
+    $(".to_top").css("display", "none");
     //gnb버튼
     $(".gnb_item").removeClass("active");
     $(".gnb_item:nth-of-type(1)").addClass("active");
@@ -18,6 +19,7 @@ $(function(){
     $(".slide_wrap").css("transform", "translateX(-20%)");
     $(".about_wrap .headline").css("animation", "ani_about 1s 1s both");
     $(".about_wrap .about_content").delay(2000).fadeIn();
+    $(".to_top").css("display", "none");
     //gnb버튼
     $(".gnb_item").removeClass("active");
     $(".gnb_item:nth-of-type(2)").addClass("active");
@@ -25,6 +27,7 @@ $(function(){
   let To_3rd = function(){
     $(".slide_wrap").css("transform", "translateX(-40%)");
     $(".skill_wrap .headline").css("animation", "ani_skill_h2 1s 1s both");
+    $(".to_top").css("display", "none");
     // 스킬바 애니메이션 작동
     $(".skill_bar > span").css("animation", "ani_skill 1s both");
     $(".skill_tech li:nth-of-type(1) .skill_bar > span").css("animation-delay", "1.5s");
@@ -38,6 +41,7 @@ $(function(){
   let To_4th = function(){
     $(".slide_wrap").css("transform", "translateX(-60%)");
     $("#portfolio").scrollTop(0);
+    $(".to_top").css("display", "block").removeClass("active");
     //gnb버튼
     $(".gnb_item").removeClass("active");
     $(".gnb_item:nth-of-type(4)").addClass("active");
@@ -45,7 +49,8 @@ $(function(){
   let To_5th = function(){
     $(".slide_wrap").css("transform", "translateX(-80%)");
     $(".contact .headline").css("animation", "ani_contact 1s 1s both");
-    $(".contact > a").css("animation", "ani_contact 1s 2s both")
+    $(".contact > a").css("animation", "ani_contact 1s 2s both");
+    $(".to_top").css("display", "none");
     //gnb버튼
     $(".gnb_item").removeClass("active");
     $(".gnb_item:nth-of-type(5)").addClass("active");
@@ -101,6 +106,22 @@ $(function(){
       }
     });
     //4페이지에서
+    $(".to_top").click(function(){
+      $("#portfolio").stop(true, true).animate({"scrollTop": 0},500);
+      index = 0;
+      $(this).removeClass("active");
+    })
+    page4.addEventListener('scroll', function(){
+      let pf_index = document.getElementById("pf_index");
+      let currHeight = pf_index.getBoundingClientRect().top;
+      if(currHeight < -700){
+        $(".to_top").addClass("active");
+      }
+      else if(currHeight >= -700){
+        $(".to_top").removeClass("active");
+      }
+    })//4페이지 스크롤시 TOP버튼 활성화
+    
     let index = 0;
     $("a[href='#page1']").click(function(){
       index = 1;
@@ -119,7 +140,6 @@ $(function(){
         if(index < 4){
           index++;
           let h = $($("#portfolio > div")[index]).offset().top;
-          console.log(h);
           $("#portfolio").stop(true, true).animate({"scrollTop": h*index},500);
         }
         else{
@@ -131,7 +151,6 @@ $(function(){
         if(index > 0){
           index--;
           let h = $($("#portfolio > div")[index]).offset().top;
-          console.log(h);
           $("#portfolio").stop(true, true).animate({"scrollTop": -(h*index)},500);
         }
         else{
