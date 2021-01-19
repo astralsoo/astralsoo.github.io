@@ -603,11 +603,18 @@
       </p>
     </section>
   </div>
+  <div class="to_top" title="맨 위로">
+    <span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </span>
+    <span>TOP</span>
+  </div>
 
   <script>
     window.onload = function(){
       $("#loading").fadeOut("fast");
     };
+    //모바일에서 탭창 제외한 뷰포트 높이 재설정
     let setNewVH = function(){
       let vh = window.innerHeight * 0.01;
       let prop_vh = vh + "px";
