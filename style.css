@@ -56,17 +56,38 @@ em{
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 200px;
+  height: max-content;
   transform: translate(-50%, -50%);
   font-size: 24px;
   color: #5C5C59;
   text-align: center;
 }
-#loading .fa{
-  display: block;
-  margin-bottom: 20px;
+.loading_ani > span{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #FFC83D;
+  border-radius: 50%;
+  animation: ani_loading 1.2s linear infinite;
+  margin: 0 4px;
 }
-#loading span{
-  font-weight: bold;
+.loading_ani > span:nth-of-type(2){
+  animation-delay: .3s;
+}
+.loading_ani > span:nth-of-type(3){
+  animation-delay: .6s;
+}
+@keyframes ani_loading{
+  0%{}
+  50%{
+    transform: scale(1.8);
+    background-color: #f37eb5;
+  }
+  100%{
+    transform: scale(1);
+    background-color: #FFC83D;
+  }
 }
 
 /* 하단 네비게이션 */
