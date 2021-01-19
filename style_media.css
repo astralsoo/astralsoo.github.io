@@ -470,6 +470,10 @@
   .contact > a {
     font-size: 32px;
   }
+  
+  .to_top{
+    bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 550px){
@@ -542,6 +546,11 @@
 
   .contact > a{
     font-size: 30px;
+  }
+  
+  .to_top{
+    right: 30px;
+    bottom: 60px;
   }
 }
 
