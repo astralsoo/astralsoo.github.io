@@ -152,8 +152,10 @@ $(function(){
   // 1022px미만 햄버거버튼 작동 기능
   let Gnb_Menubar = function(){
     $(".menubar").click(function(){
-      $(".gnb").toggleClass("active");
-      $(".menubar .fa").toggleClass("fa-bars").toggleClass("fa-times");
+      if(window.innerWidth < 1022){
+        $(".gnb").toggleClass("active");
+        $(".menubar .fa").toggleClass("fa-bars").toggleClass("fa-times");
+      }
     })
   }
 
