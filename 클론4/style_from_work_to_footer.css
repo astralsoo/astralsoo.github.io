@@ -351,8 +351,7 @@
   color: rgb(255, 187, 66);
 }
 .sns > a:hover > .fa{
-  -webkit-transform: -webkit-rotate3d(0, 1, 0, 360deg);
-  transform: rotate3d(0, 1, 0, 360deg);
+  animation: ani_sns .3s both;
 }
 .footer_wrap .copyright{
   height: 60px;
@@ -362,4 +361,16 @@
   font-size: 14px;
   font-family: 'Manrope', sans-serif;
   word-spacing: 2px;
+}
+
+@keyframes ani_sns{
+  0%{
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  50%{
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100%{
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
 }
