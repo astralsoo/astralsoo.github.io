@@ -1,4 +1,6 @@
 $(function(){
+  let index = 0; //4페이지 인덱스 초기값 설정
+  
   //익스플로러 확인
   let agent = navigator.userAgent.toLowerCase();
   if(
@@ -42,6 +44,7 @@ $(function(){
     $(".slide_wrap").css("transform", "translateX(-60%)");
     $("#portfolio").scrollTop(0);
     $(".to_top").css("display", "block").removeClass("active");
+    index = 0;
     //gnb버튼
     $(".gnb_item").removeClass("active");
     $(".gnb_item:nth-of-type(4)").addClass("active");
@@ -122,7 +125,6 @@ $(function(){
       }
     })//4페이지 스크롤시 TOP버튼 활성화
     
-    let index = 0;
     $("a[href='#page1']").click(function(){
       index = 1;
     })
@@ -166,7 +168,6 @@ $(function(){
       }
       else if(e.deltaY < 0){
         To_4th();
-        index = 0;
       }
     });
   }
