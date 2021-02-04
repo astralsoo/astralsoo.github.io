@@ -117,14 +117,14 @@ $(function(){
             let getRandomNum = function(min, max) {
               return Math.floor(Math.random() * (max - min) + min) + "%";
             }
+            let arr_color = ["#c6679d", "#cd37c5", "#c5952b", "#59b576", "#19887c", "#dc346c", "#9dae05", "#32f5c7", "#71fb1e", "#bebccc"];
             let getRandomColor = function(max){
-              let arr_color = ["#c6679d", "#cd37c5", "#c5952b", "#59b576", "#19887c", "#dc346c", "#9dae05", "#32f5c7", "#71fb1e", "#bebccc"];
-              let randomIndex = Math.floor(Math.random() * Math.floor(max));
+              let randomIndex = Math.floor(Math.random() * max);
               return arr_color[randomIndex];
             }
             let random_offsetX = getRandomNum(1, 75);
             let random_offsetY = getRandomNum(1, 75);
-            let random_color = getRandomColor(10);
+            let random_color = getRandomColor(arr_color.length);
             $(".curr_search > a:nth-of-type("+i+")").css({
               "top":random_offsetY,
               "left":random_offsetX,
