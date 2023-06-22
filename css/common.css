@@ -7,6 +7,7 @@ html{scroll-behavior:smooth;}
 body{font-family:'Geologica', 'Noto sans KR', sans-serif;color:#111;position:relative;overflow:auto;}
 .hide{display:block;position:absolute;width:0;height:0;text-indent:-9999999px;overflow:hidden;}
 .img-box > img{max-width:100%;}
+.no-js{opacity:0;}
 
 /* layout */
 header{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(46,176,199,.6);transition:.3s;}
