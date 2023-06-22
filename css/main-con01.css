@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.main-content-wrap01{height:100vh !important;background:url(../img/img-bg-intro.jpg) no-repeat center / cover;position:relative;z-index:9;}
+.main-content-wrap01{height:100vh !important;background:#fff url(../img/img-bg-intro.jpg) no-repeat center / cover;position:relative;z-index:9;}
 .main-content-wrap01:after{content:"";position:absolute;top:0;left:0;display:block;width:100%;height:100%;background:rgba(255,255,255,.5);}
 
 .main-content-box01 .main-content{position:relative;padding:0 !important;}
