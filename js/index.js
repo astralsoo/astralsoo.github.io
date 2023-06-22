@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    setTimeout(function(){
+	$('html').removeClass('no-js')
+    }, 500);
+	
     //메인 오프닝 효과
     //case 1. gnb를 이용해 이동하는 경우
     $('.gnb-ul a, .m-gnb-ul a').click(function(){
@@ -71,7 +75,9 @@ $(document).ready(function () {
             i++;
         }
     }
-    setInterval(typing, 150);
+    setTimeout(function(){
+	setInterval(typing, 150);
+    }, 1000);
 
     //메인컨텐츠3 스와이퍼
     var swiper = new Swiper(".swiper-portfolio", {
