@@ -7,7 +7,7 @@ $(document).ready(function () {
     //case 1. gnb를 이용해 이동하는 경우
     $('.gnb-ul a, .m-gnb-ul a').click(function(){
         if($(this).hasClass('btn-open')){
-            if(Math.floor(document.querySelector('.main-content-box01').getBoundingClientRect().bottom) <= $(window).height()){
+            if(Math.floor(document.querySelector('.main-content-box01').getBoundingClientRect().bottom) <= screen.height){
                 var id = $(this).attr('href');
                 if(id === '#about'){
                     var vh = document.querySelector('.main-content-box01').getBoundingClientRect().bottom;
