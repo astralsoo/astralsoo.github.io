@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.main-content-box02 .main-content .about-box{display:flex;align-items:center;}
+
+.about-box .left-box{width:40%;}
+.about-box .left-box .img-box{max-width:300px;}
+.about-box .left-box .img-box > img{width:100%;}
+.about-box .left-box .txt-box{margin:20px 0 0;padding:0 0 0 50px;box-sizing:border-box;}
+.about-box .left-box .txt-box p{margin:0 0 20px;font-size:18px;line-height:1;}
+.about-box .left-box .txt-box p.strong{font-size:28px;font-weight:500;}
+
+.about-box .right-box{width:60%;padding:0 0 0 60px;border-left:2px solid #000;box-sizing:border-box;}
+.about-box .right-box .about-ul{padding:30px 0;box-sizing:border-box;}
+.about-box .right-box .about-ul01{border-bottom:2px dotted #ccc;}
+.about-box .right-box .about-ul > li{display:table;width:100%;margin:0 0 20px;font-size:18px;line-height:26px;}
+.about-box .right-box .about-ul > li:last-of-type{margin:0;}
+.about-box .right-box .about-ul > li > span{display:table-cell;width:30%;max-width:200px;padding:0 15px 0 0;}
+.about-box .right-box .about-ul > li > p{display:table-cell;vertical-align:middle;word-break:keep-all;}
+
+@media screen and (max-width:1024px) {
+    .main-content-box02 .main-content .about-box{display:block;}
+
+    .about-box .left-box{width:100%;padding:0 0 30px;}
+    .about-box .left-box .img-box{margin:0 auto;}
+    .about-box .left-box .txt-box{padding:0;text-align:center;}
+    .about-box .left-box .txt-box p:last-of-type{margin:0;}
+    .about-box .right-box{width:100%;padding:0;border-left:none;border-top:2px solid #000;border-bottom:2px solid #000;}
+    .about-box .right-box .about-ul > li{width:700px;margin:0 auto 20px;text-align:center;}
+    .about-box .right-box .about-ul > li:last-of-type{margin:0 auto;}
+}
+
+@media screen and (max-width:768px) {
+    .about-box .left-box .txt-box p.strong{font-size:24px;}
+    .about-box .right-box .about-ul > li{width:100%;}
+}
+
+@media screen and (max-width:480px){
+    .about-box .left-box .txt-box p{font-size:16px;}
+    .about-box .left-box .txt-box p.strong{font-size:20px;margin:0 0 15px;}
+    .about-box .right-box .about-ul > li{text-align:left;font-size:14px;line-height:22px;}
+}
