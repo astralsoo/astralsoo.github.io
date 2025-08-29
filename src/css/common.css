@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+/* 웹폰트 */
+@font-face {
+    font-family: 'goorm-sans-bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* reset CSS START */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    color: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html, body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1;
+    font-family: 'Pretendard Variable', sans-serif;
+    overflow-y: hidden;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+h1, h2, h3, h4, h5, h6{
+    word-break: keep-all;
+}
+h1, h2, h3, h4, h5, h6, p, span{
+    cursor: default;
+}
+input, button, select, textarea{
+    font-family: 'Pretendard Variable', sans-serif;
+}
+input::placeholder{
+    color: #bebebe;
+    transition: .1s;
+}
+input:focus::placeholder{
+    opacity: 0;
+}
+/* reset CSS END */
+
+
+/* common */
+.wrap{}
+.wrap:after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../assets/background2.jpg) no-repeat center / cover;
+    z-index: -1;
+}
+.hide{
+    display: none !important;
+}
+.mb-0{
+    margin-bottom: 0 !important;
+}
+.pb-0{
+    padding-bottom: 0 !important;
+}
+.txt-en {
+    font-family: "Montserrat", sans-serif !important;
+}
+.txt-title {
+    font-family: 'goorm-sans-bold', 'Pretendard Variable', sans-serif ;
+}
+.txt-center{
+    text-align: center !important;
+}
+.txt-left{
+    text-align: left !important;
+}
+.txt-right{
+    text-align: right !important;
+}
+.txt-300{
+    font-weight: 300;
+}
+.txt-500{
+    font-weight: 500;
+}
+.txt-600{
+    font-weight: 600;
+}
+.txt-700{
+    font-weight: 700;
+}
+.txt-underline{
+    position: relative;
+}
+.txt-underline .line{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    width: 0;
+    background: rgba(110,145,205,.25);
+}
+
+@keyframes underlineAni {
+    0%{
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+:root{
+    --h2-size: 2rem;
+    --h2-weight: 800;
+    --h2-margin: 40px;
+    --h3-size: 1.5rem;
+    --h3-weight: 600;
+    --h3-margin: 15px;
+    /* --opacity: hidden; */
+}
+
+
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+.header-wrap{
+    margin: 18px 20px;
+    padding: 0 50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4.5px);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
+    box-shadow: 0 8px 32px 0 rgba(198, 203, 207, 0.37);
+    box-sizing: border-box;
+}
+.header-wrap .header-box{
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.gnb{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.gnb > li{
+    padding: 20px 10px 22px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0; */
+}
+.footer-wrap{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.footer-wrap .footer-box{
+    padding: 10px;
+}
+.footer-box p{
+    text-align: center;
+    font-size: .75rem;
+    color: rgba(255,255,255,.7);
+}
+
+/* page 공통 */
+main{
+    /* height: 100vh; */
+    /* overflow-y: auto; */
+    /* scroll-snap-type: y mandatory; */
+}
+main::-webkit-scrollbar{
+    display: none;
+}
+
+.page{
+    height: 100vh;
+    padding: 100px 0 0;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+.page > div{
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    align-content: center;
+    box-sizing: border-box;
+}
+.page03{
+    height: 1600px;
+    padding: 150px 0 0;
+}
+
+@media screen and (max-width: 1440px) {
+    .page > div{
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .gnb{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root{
+        font-size: 14px;
+    }
+    .page02{
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root{
+        font-size: 13px;
+    }
+    .header-wrap{
+        padding: 0 20px;
+    }
+    .gnb > li{
+        padding: 20px 5px 22px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :root{
+        font-size: 12px;
+    }
+    .header-wrap{
+        margin: 18px 10px;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.main-wrap{
+    position: relative;
+}
+.main-wrap .main-box{
+    text-align: center;
+    transform: translateY(-50px);
+}
+.main-wrap .main-box h1{
+    font-size: 8rem;
+    line-height: 1.3;
+    /* color: #333; */
+    /* text-shadow: 2px 2px 1px rgba(110,145,205,.3); */
+    color: transparent;
+    background: linear-gradient(#333, #333) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 100%;
+}
+.main-wrap .main-box h1 span{}
+.main-wrap .main-box h1 span::after{
+    content: "";
+    display: inline-block;
+    width: var(--w, 4px);
+    height: calc(8rem - 10px);
+    margin: 0 5px 16px 10px;
+    vertical-align: middle;
+    background: #000;
+    animation: Text 0.5s linear infinite alternate;
+}
+.main-wrap .scroll-box{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.main-wrap .scroll-box span{
+    display: inline-block;
+    color: #999;
+    letter-spacing: 1px;
+    animation: TextDown 2s ease-in-out infinite;
+}
+@keyframes Text {
+    0% {
+        opacity:0;
+    }
+    40% {
+        opacity:.8;
+    }
+    100% {
+        opacity:.8;
+    }
+}
+@keyframes TextDown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(10px);
+        opacity: 0.5;
+    }
+    40% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        /* 70% 이후부터는 아무 변화 없음 = 대기 상태 */
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-wrap .main-box h1{
+        font-size: 5.5rem;
+    }
+    .main-wrap .main-box h1 span::after{
+        height: 5.5rem;
+        margin: 0 5px 4px 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-wrap .main-box h1{
+        font-size: 4rem;
+    }
+    .main-wrap .main-box h1 span::after{
+        height: 4rem;
+    }
+}
+
+@media screen and (max-height:480px) {
+    .main-wrap .scroll-box{
+        bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .main-wrap .main-box{
+        transform: translateY(-20px);
+    }
+    .main-wrap .main-box h1{
+        font-size: 4rem;
+    }
+    .main-wrap .main-box h1 span::after{
+        height: 4rem;
+    }
+}
