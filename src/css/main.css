@@ -18,7 +18,9 @@
     -webkit-text-fill-color: transparent;
     background-size: 100% 100%;
 }
-.main-wrap .main-box h1 span{}
+.main-wrap .main-box h1 span{
+    min-width: 1ch;
+}
 .main-wrap .main-box h1:first-child span::after{
     content: "";
     display: inline-block;
