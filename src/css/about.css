@@ -16,7 +16,7 @@
     display: inline-block;
     width: 50%;
     height: 100px;
-    background: url('/src/assets/img-itsme.png') no-repeat center / contain;
+    background: url('/images/img-itsme.png') no-repeat center / contain;
     transform: translateX(30px);    
 }
 .about-box .img-box img{
