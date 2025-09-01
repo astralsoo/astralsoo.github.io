@@ -4,7 +4,7 @@ import About from './pages/about'
 import Portfolio from './pages/portfolio'
 import Contact from './pages/contact'
 import Footer from './components/footer'
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 
 function App() {
   const mainRef = useRef(null)
@@ -16,7 +16,7 @@ function App() {
     ref.current.scrollIntoView({ behavior: 'smooth' })
   }
 
-  useEffect( () => {
+  useLayoutEffect( () => {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual'
     }
