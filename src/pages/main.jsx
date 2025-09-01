@@ -122,7 +122,7 @@ function Main() {
   return <>
     <div className="main-wrap">
       <div className="main-box txt-title">
-        <h1 ref={text01Ref}><span>{text}</span>하는</h1>
+        <h1 ref={text01Ref}><span>{text || '\u200B'}</span>하는</h1>
         <h1 ref={text02Ref}><span>{text02[index02]}</span></h1>
       </div>
       <div className="scroll-box txt-en">
