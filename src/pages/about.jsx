@@ -69,7 +69,7 @@ function About() {
     <div className='about-wrap'>
       <div className='about-box' ref={aboutRef}>
         <div className='img-box'>
-          <img src='/src/assets/me.jpg' alt='me'></img>
+          <img src='/images/me.jpg' alt='me'></img>
         </div>
         <div className='txt-box'>
           <h2>
@@ -94,15 +94,15 @@ function About() {
               <SkillList classNm="nice" icon={<FontAwesomeIcon icon={faHtml5} />} txt={'HTML'}></SkillList>
               <SkillList classNm="nice" icon={<FontAwesomeIcon icon={faCss3Alt} />} txt={'CSS'}></SkillList>
               <SkillList classNm="nice" icon={<FontAwesomeIcon icon={faSquareJs} />} txt={'Javascript'}></SkillList>
-              <SkillList classNm="nice" icon={<img src='/src/assets/ico-jquery.svg' alt='jquery'></img>} txt={'Jquery'}></SkillList>
+              <SkillList classNm="nice" icon={<img src='/images/ico-jquery.svg' alt='jquery'></img>} txt={'Jquery'}></SkillList>
               <SkillList classNm="good" icon={<FontAwesomeIcon icon={faReact} />} txt={'React'}></SkillList>
               <SkillList classNm="soso" icon={<FontAwesomeIcon icon={faVuejs} />} txt={'Vue'}></SkillList>
-              <SkillList classNm="good" icon={<img src='/src/assets/ico-django.svg' alt='django'></img>} txt={'Django'}></SkillList>
-              <SkillList classNm="soso" icon={<img src='/src/assets/ico-gsap.svg' alt='gsap'></img>} txt={'GSAP'}></SkillList>              
+              <SkillList classNm="good" icon={<img src='/images/ico-django.svg' alt='django'></img>} txt={'Django'}></SkillList>
+              <SkillList classNm="soso" icon={<img src='/images/ico-gsap.svg' alt='gsap'></img>} txt={'GSAP'}></SkillList>              
               <SkillList classNm="good" icon={<FontAwesomeIcon icon={faGitAlt} />} txt={'Git'}></SkillList>
               <SkillList classNm="good" icon={<FontAwesomeIcon icon={faGithub} />} txt={'Github'}></SkillList>
               <SkillList classNm="good" icon={<FontAwesomeIcon icon={faSquareFigma} />} txt={'Figma'}></SkillList>
-              <SkillList classNm="soso" icon={<img src='/src/assets/ico-photoshop.svg' alt='photoshop'></img>} txt={'Photoshop'}></SkillList>
+              <SkillList classNm="soso" icon={<img src='/images/ico-photoshop.svg' alt='photoshop'></img>} txt={'Photoshop'}></SkillList>
             </ul>
           </div>
         </div>

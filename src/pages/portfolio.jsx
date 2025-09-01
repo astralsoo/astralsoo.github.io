@@ -234,10 +234,10 @@ function Portfolio() {
                             if (item == 'html') return <span key={idx} data-title="html"><FontAwesomeIcon icon={faHtml5}/></span>
                             else if (item == 'css') return <span key={idx} data-title="css"><FontAwesomeIcon icon={faCss3Alt}/></span>
                             else if (item == 'js') return <span key={idx} data-title="javascript"><FontAwesomeIcon icon={faSquareJs}/></span>
-                            else if (item == 'jquery') return <span key={idx} data-title="jquery"><img src='/src/assets/ico-jquery.svg' alt='jquery'></img></span>
+                            else if (item == 'jquery') return <span key={idx} data-title="jquery"><img src='/images/ico-jquery.svg' alt='jquery'></img></span>
                             else if (item == 'react') return <span key={idx} data-title="react.js"><FontAwesomeIcon icon={faReact}/></span>
                             else if (item == 'vue') return <span key={idx} data-title="vue.js"><FontAwesomeIcon icon={faVuejs}/></span>
-                            else if (item == 'django') return <span key={idx} data-title="django"><img src='/src/assets/ico-django.svg' alt='django'></img></span>
+                            else if (item == 'django') return <span key={idx} data-title="django"><img src='/images/ico-django.svg' alt='django'></img></span>
                           })
                         }
                       </p>
