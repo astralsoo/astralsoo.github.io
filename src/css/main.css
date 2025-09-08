@@ -11,7 +11,7 @@
     font-size: 8rem;
     line-height: 1.3;
     color: #333;
-    -webkit-mask-image: linear-gradient(
+    /* -webkit-mask-image: linear-gradient(
         to right,
         black 0,
         black var(--wipe, 100%),
@@ -20,7 +20,7 @@
     );
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0); */
 }
 .main-wrap .main-box h1 span{
     display: inline-block;
