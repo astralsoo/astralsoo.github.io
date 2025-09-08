@@ -22,36 +22,86 @@ function Main() {
   }
 
   useEffect(() => {
-    const type = () => {
-      const curTxt = text01[index01Ref.current]
-      const el = text01Ref.current
-      text02Ref.current.textContent = index01Ref.current === 0 ? text02[0] : text02[1]
+    if (isIOS()) {
+      let index = 0;
+      const container1 = line01Ref.current;
+      const container2 = line02Ref.current;
 
-      if (!isDeleteRef.current) {
-        el.textContent = curTxt.substring(0, charIndexRef.current + 1)
-        charIndexRef.current += 1
-      } else {
-        el.textContent = curTxt.substring(0, charIndexRef.current - 1)
-        charIndexRef.current -= 1
-      }
+      const typeNext = () => {
+        const word1 = text01[index];
+        const word2 = text02[index];
 
-      // 문장 끝
-      if (!isDeleteRef.current && charIndexRef.current === curTxt.length) {
-        isDeleteRef.current = true
-        setTimeout(type, 1000)
-        return
-      }
-      // 다 지운 후
-      if (isDeleteRef.current && charIndexRef.current === 0) {
-        isDeleteRef.current = false
-        index01Ref.current = (index01Ref.current + 1) % text01.length
-        setTimeout(type, 500)
-        return
-      }
+        container1.innerHTML = "";
+        container2.innerHTML = "";
 
-      setTimeout(type, isDeleteRef.current ? 100 : 200)
+        word1.split("").forEach((ch) => {
+          const span = document.createElement("span");          
+          span.textContent = ch;
+          span.style.opacity = 0;
+          span.style.display = "inline-block";
+          container1.appendChild(span);
+        });
+        container1.innerHTML += "하는";
+
+        const span = document.createElement("span");
+        span.textContent = word2
+        container2.appendChild(span)
+
+        const spans1 = container1.querySelectorAll("span");
+
+        gsap.to(spans1, {
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.3,
+          ease: "power1.out",
+          onComplete: () => {
+            gsap.to(spans1, {
+              opacity: 0,
+              stagger: 0.05,
+              duration: 0.2,
+              delay: 0.8,
+              onComplete: () => {
+                index = (index + 1) % text01.length;
+                typeNext();
+              },
+            });
+          },
+        });
+      }
+      typeNext();
+    } 
+    else {
+      const type = () => {
+        const curTxt = text01[index01Ref.current]
+        const el = text01Ref.current
+        text02Ref.current.textContent = index01Ref.current === 0 ? text02[0] : text02[1]
+
+        if (!isDeleteRef.current) {
+          el.textContent = curTxt.substring(0, charIndexRef.current + 1)
+          charIndexRef.current += 1
+        } else {
+          el.textContent = curTxt.substring(0, charIndexRef.current - 1)
+          charIndexRef.current -= 1
+        }
+
+        // 문장 끝
+        if (!isDeleteRef.current && charIndexRef.current === curTxt.length) {
+          isDeleteRef.current = true
+          setTimeout(type, 1000)
+          return
+        }
+        // 다 지운 후
+        if (isDeleteRef.current && charIndexRef.current === 0) {
+          isDeleteRef.current = false
+          index01Ref.current = (index01Ref.current + 1) % text01.length
+          setTimeout(type, 500)
+          return
+        }
+
+        setTimeout(type, isDeleteRef.current ? 100 : 200)
+      }
+      type()
     }
-    type()
   }, [])
 
   gsap.registerPlugin(ScrollTrigger)
@@ -65,59 +115,33 @@ function Main() {
     gsap.set([line01Ref.current, line02Ref.current], { '--wipe': '100%' })
     gsap.set(line01Ref.current, { '--w': '4px' })
 
-    if (isIOS()) {
-      gsap.to(line01Ref.current, {
-        opacity: '0',
-        scrollTrigger: {
-          trigger: '.main-wrap',
-          start: 'top 100px', 
-          end: 'bottom 70%',
-          scrub: true,
-          pin: '.page01',
-          pinSpacing: true,
-        },
-      })
-      gsap.to(line02Ref.current, {
-        opacity: '0',
-        scrollTrigger: {
-          trigger: '.main-wrap',
-          start: 'bottom 70%', 
-          end: 'bottom 20%',
-          scrub: true,
-          pin: '.page01',
-          pinSpacing: true,
-        },
-      })
-    }
-    else {
-      gsap.to(line01Ref.current, {
-        // backgroundSize: '0% 100%',
-        '--wipe': '0%',
-        '--w' : '0',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.main-wrap',
-          start: 'top 100px', 
-          end: 'bottom 70%',
-          scrub: true,
-          pin: '.page01',
-          pinSpacing: true,
-        },
-      })
-      gsap.to(line02Ref.current, {
-        // backgroundSize: '0% 100%',
-        '--wipe': '0%',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.main-wrap',
-          start: 'bottom 70%', 
-          end: 'bottom 20%',
-          scrub: true,
-          pin: '.page01',
-          pinSpacing: true,
-        },
-      })
-    }
+    gsap.to(line01Ref.current, {
+      // backgroundSize: '0% 100%',
+      '--wipe': '0%',
+      '--w' : '0',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.main-wrap',
+        start: 'top 100px', 
+        end: 'bottom 70%',
+        scrub: true,
+        pin: '.page01',
+        pinSpacing: true,
+      },
+    })
+    gsap.to(line02Ref.current, {
+      // backgroundSize: '0% 100%',
+      '--wipe': '0%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.main-wrap',
+        start: 'bottom 70%', 
+        end: 'bottom 20%',
+        scrub: true,
+        pin: '.page01',
+        pinSpacing: true,
+      },
+    })
     gsap.fromTo('.scroll-box', {
       opacity: '1',
     },
