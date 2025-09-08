@@ -57,11 +57,13 @@ function Main() {
     })
 
     gsap.fromTo(line01Ref.current, {
-      backgroundSize: '100% 100%',
+      // backgroundSize: '100% 100%',
+      '--wipe': '100%',
       '--w' : '4px',
     },
     {
-      backgroundSize: '0% 100%',
+      // backgroundSize: '0% 100%',
+      '--wipe': '0%',
       '--w' : '0',
       scrollTrigger: {
         trigger: '.main-wrap',
@@ -70,17 +72,15 @@ function Main() {
         scrub: true,
         pin: '.page01',
         pinSpacing: true,
-        // markers: {
-        //   startColor: 'red',
-        //   endColor: 'blue'
-        // }
       },
     })
     gsap.fromTo(line02Ref.current, {
-      backgroundSize: '100% 100%',
+      // backgroundSize: '100% 100%',
+      '--wipe': '100%',
     },
     {
-      backgroundSize: '0% 100%',
+      // backgroundSize: '0% 100%',
+      '--wipe': '0%',
       scrollTrigger: {
         trigger: '.main-wrap',
         start: 'bottom 70%', 
@@ -88,10 +88,6 @@ function Main() {
         scrub: true,
         pin: '.page01',
         pinSpacing: true,
-        // markers: {
-        //   startColor: 'red',
-        //   endColor: 'blue'
-        // }
       },
     })
     gsap.fromTo('.scroll-box', {

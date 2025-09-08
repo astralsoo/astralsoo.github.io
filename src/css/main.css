@@ -11,10 +11,17 @@
     font-size: 8rem;
     line-height: 1.3;
     color: transparent;
-    background: linear-gradient(#333, #333) no-repeat;
+    background: linear-gradient(
+        to right,
+        #333 0,
+        #333 var(--wipe, 100%),
+        transparent var(--wipe, 100%),
+        transparent 100%
+    ) no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100% 100%;
+    will-change: background-image;
 }
 .main-wrap .main-box h1 span{
     display: inline-block;
