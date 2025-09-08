@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
 import '../css/main.css'
@@ -7,61 +7,56 @@ function Main() {
   const text01 = ['개발', '퍼블']
   const text02 = ['퍼블리셔', '개발자']
   const text03 = 'Scroll Down'
-  const [text, setText] = useState('')
-  const [index01, setIndex01] = useState(0)
-  const [index02, setIndex02] = useState(0)
-  const [charIndex, setCharIndex] = useState(0)
-  const [isDelete, setIsDelete] = useState(false)
+  const index01Ref = useRef(0)
+  const charIndexRef = useRef(0)
+  const isDeleteRef = useRef(false)
   const text01Ref = useRef(null)
   const text02Ref = useRef(null)
+  const line01Ref = useRef(null)
+  const line02Ref = useRef(null)
 
-  useEffect( () => {
-    const curTxt = text01[index01]
-    let typingSpeed = 200
+  useEffect(() => {
+    const type = () => {
+      const curTxt = text01[index01Ref.current]
+      const el = text01Ref.current
+      text02Ref.current.textContent = index01Ref.current === 0 ? text02[0] : text02[1]
 
-    if (isDelete) typingSpeed = 100
-    if (!isDelete && charIndex === curTxt.length) typingSpeed = 1000
-    if (isDelete && charIndex === 0) typingSpeed = 500 // 지우기 끝나면 대기
-
-    const timer = setTimeout(() => {
-      if (!isDelete) {
-        // 타이핑 중
-        setText(curTxt.substring(0, charIndex + 1))
-        setCharIndex(charIndex + 1)
+      if (!isDeleteRef.current) {
+        el.textContent = curTxt.substring(0, charIndexRef.current + 1)
+        charIndexRef.current += 1
       } else {
-        // 지우는 중
-        setText(curTxt.substring(0, charIndex - 1))
-        setCharIndex(charIndex - 1)
+        el.textContent = curTxt.substring(0, charIndexRef.current - 1)
+        charIndexRef.current -= 1
       }
 
-      // 문장 끝까지 타이핑했으면 지우기 모드로 변경
-      if (!isDelete && charIndex === curTxt.length) {
-        setIsDelete(true)
+      // 문장 끝
+      if (!isDeleteRef.current && charIndexRef.current === curTxt.length) {
+        isDeleteRef.current = true
+        setTimeout(type, 1000)
+        return
       }
-      // 다 지웠으면 다음 문장으로 이동
-      else if (isDelete && charIndex === 0) {
-        setIsDelete(false)
-        setIndex01((index01 + 1) % text01.length)
+      // 다 지운 후
+      if (isDeleteRef.current && charIndexRef.current === 0) {
+        isDeleteRef.current = false
+        index01Ref.current = (index01Ref.current + 1) % text01.length
+        setTimeout(type, 500)
+        return
       }
 
-      // text02 같이 맞춰서 변경
-      if (index01 == 0 && charIndex == 0) {
-        setIndex02(0)
-      }
-      else if (index01 == 1 && charIndex == 0) {
-        setIndex02(1)
-      }
-    }, typingSpeed)
-
-    return () => clearTimeout(timer)
-
-  }, [charIndex, isDelete, index01])
+      setTimeout(type, isDeleteRef.current ? 100 : 200)
+    }
+    type()
+  }, [])
 
   gsap.registerPlugin(ScrollTrigger)
   
   useGSAP( () => {
 
-    gsap.fromTo(text01Ref.current, {
+    ScrollTrigger.config({
+      ignoreMobileResize: true,
+    })
+
+    gsap.fromTo(line01Ref.current, {
       backgroundSize: '100% 100%',
       '--w' : '4px',
     },
@@ -81,7 +76,7 @@ function Main() {
         // }
       },
     })
-    gsap.fromTo(text02Ref.current, {
+    gsap.fromTo(line02Ref.current, {
       backgroundSize: '100% 100%',
     },
     {
@@ -122,8 +117,8 @@ function Main() {
   return <>
     <div className="main-wrap">
       <div className="main-box txt-title">
-        <h1 ref={text01Ref}><span>{text}</span>하는</h1>
-        <h1 ref={text02Ref}><span>{text02[index02]}</span></h1>
+        <h1 ref={line01Ref}><span ref={text01Ref}></span>하는</h1>
+        <h1 ref={line02Ref}><span ref={text02Ref}></span></h1>
       </div>
       <div className="scroll-box txt-en">
         {text03.split('').map((char, i) => (
