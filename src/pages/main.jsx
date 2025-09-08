@@ -28,7 +28,7 @@ function Main() {
       const container2 = line02Ref.current
 
       const typeNext = () => {
-        const word1 = text01[index] + '하는'
+        const word1 = text01[index] + ' ' + '하는'
         const word2 = text02[index]
 
         container1.innerHTML = ""
