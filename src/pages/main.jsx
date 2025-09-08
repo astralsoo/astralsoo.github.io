@@ -56,15 +56,14 @@ function Main() {
       ignoreMobileResize: true,
     })
 
-    gsap.fromTo(line01Ref.current, {
-      // backgroundSize: '100% 100%',
-      '--wipe': '100%',
-      '--w' : '4px',
-    },
-    {
+    gsap.set([line01Ref.current, line02Ref.current], { '--wipe': '100%' })
+    gsap.set(line01Ref.current, { '--w': '4px' })
+
+    gsap.to(line01Ref.current, {
       // backgroundSize: '0% 100%',
       '--wipe': '0%',
       '--w' : '0',
+      ease: 'none',
       scrollTrigger: {
         trigger: '.main-wrap',
         start: 'top 100px', 
@@ -74,13 +73,10 @@ function Main() {
         pinSpacing: true,
       },
     })
-    gsap.fromTo(line02Ref.current, {
-      // backgroundSize: '100% 100%',
-      '--wipe': '100%',
-    },
-    {
+    gsap.to(line02Ref.current, {
       // backgroundSize: '0% 100%',
       '--wipe': '0%',
+      ease: 'none',
       scrollTrigger: {
         trigger: '.main-wrap',
         start: 'bottom 70%', 
