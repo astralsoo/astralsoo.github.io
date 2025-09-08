@@ -26,6 +26,8 @@
 .main-wrap .main-box h1 span{
     display: inline-block;
     line-height: 1.3;
+    transform: translateZ(0);
+    will-change: transform;
 }
 .main-wrap .main-box h1:first-child span::after{
     content: "";
