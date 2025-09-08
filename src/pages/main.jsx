@@ -14,6 +14,12 @@ function Main() {
   const text02Ref = useRef(null)
   const line01Ref = useRef(null)
   const line02Ref = useRef(null)
+  const isIOS = () => {
+    const uaCheck = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    const touchCheck = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1
+    const sizeCheck = window.innerWidth <= 1024
+    return uaCheck || (touchCheck && sizeCheck)
+  }
 
   useEffect(() => {
     const type = () => {
@@ -59,33 +65,59 @@ function Main() {
     gsap.set([line01Ref.current, line02Ref.current], { '--wipe': '100%' })
     gsap.set(line01Ref.current, { '--w': '4px' })
 
-    gsap.to(line01Ref.current, {
-      // backgroundSize: '0% 100%',
-      '--wipe': '0%',
-      '--w' : '0',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.main-wrap',
-        start: 'top 100px', 
-        end: 'bottom 70%',
-        scrub: true,
-        pin: '.page01',
-        pinSpacing: true,
-      },
-    })
-    gsap.to(line02Ref.current, {
-      // backgroundSize: '0% 100%',
-      '--wipe': '0%',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.main-wrap',
-        start: 'bottom 70%', 
-        end: 'bottom 20%',
-        scrub: true,
-        pin: '.page01',
-        pinSpacing: true,
-      },
-    })
+    if (isIOS()) {
+      gsap.to(line01Ref.current, {
+        opacity: '0',
+        scrollTrigger: {
+          trigger: '.main-wrap',
+          start: 'top 100px', 
+          end: 'bottom 70%',
+          scrub: true,
+          pin: '.page01',
+          pinSpacing: true,
+        },
+      })
+      gsap.to(line02Ref.current, {
+        opacity: '0',
+        scrollTrigger: {
+          trigger: '.main-wrap',
+          start: 'bottom 70%', 
+          end: 'bottom 20%',
+          scrub: true,
+          pin: '.page01',
+          pinSpacing: true,
+        },
+      })
+    }
+    else {
+      gsap.to(line01Ref.current, {
+        // backgroundSize: '0% 100%',
+        '--wipe': '0%',
+        '--w' : '0',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.main-wrap',
+          start: 'top 100px', 
+          end: 'bottom 70%',
+          scrub: true,
+          pin: '.page01',
+          pinSpacing: true,
+        },
+      })
+      gsap.to(line02Ref.current, {
+        // backgroundSize: '0% 100%',
+        '--wipe': '0%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.main-wrap',
+          start: 'bottom 70%', 
+          end: 'bottom 20%',
+          scrub: true,
+          pin: '.page01',
+          pinSpacing: true,
+        },
+      })
+    }
     gsap.fromTo('.scroll-box', {
       opacity: '1',
     },
