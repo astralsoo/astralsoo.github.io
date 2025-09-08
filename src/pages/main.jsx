@@ -23,31 +23,33 @@ function Main() {
 
   useEffect(() => {
     if (isIOS()) {
-      let index = 0;
-      const container1 = line01Ref.current;
-      const container2 = line02Ref.current;
+      let index = 0
+      const container1 = line01Ref.current
+      const container2 = line02Ref.current
 
       const typeNext = () => {
-        const word1 = text01[index];
-        const word2 = text02[index];
+        const word1 = text01[index] + '하는'
+        const word2 = text02[index]
 
-        container1.innerHTML = "";
-        container2.innerHTML = "";
+        container1.innerHTML = ""
+        container2.innerHTML = ""
 
         word1.split("").forEach((ch) => {
-          const span = document.createElement("span");          
-          span.textContent = ch;
-          span.style.opacity = 0;
-          span.style.display = "inline-block";
-          container1.appendChild(span);
+          const span = document.createElement("span")
+          span.textContent = ch
+          span.style.opacity = 0
+          span.style.display = "inline-block"
+          container1.appendChild(span)
         });
-        container1.innerHTML += "하는";
 
-        const span = document.createElement("span");
+        const span = document.createElement("span")
         span.textContent = word2
+        span.style.opacity = 0
+        span.style.display = "inline-block"
         container2.appendChild(span)
 
-        const spans1 = container1.querySelectorAll("span");
+        const spans1 = container1.querySelectorAll("span")
+        const spans2 = container2.querySelector("span")
 
         gsap.to(spans1, {
           opacity: 1,
@@ -61,14 +63,20 @@ function Main() {
               duration: 0.2,
               delay: 0.8,
               onComplete: () => {
-                index = (index + 1) % text01.length;
-                typeNext();
+                index = (index + 1) % text01.length
+                typeNext()
               },
             });
           },
-        });
+        })
+        gsap.to(spans2, {
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.3,
+          ease: "power1.out",
+        })
       }
-      typeNext();
+      typeNext()
     } 
     else {
       const type = () => {
