@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClose, faLink } from "@fortawesome/free-solid-svg-icons"
-import { faCss3Alt, faHtml5, faReact, faSquareJs, faVuejs } from "@fortawesome/free-brands-svg-icons"
+import { faCss3Alt, faHtml5, faNodeJs, faReact, faSquareJs, faVuejs } from "@fortawesome/free-brands-svg-icons"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Keyboard, Pagination, Mousewheel, Navigation } from 'swiper/modules'
 import 'swiper/css';
@@ -237,6 +237,7 @@ function Portfolio() {
                             else if (item == 'jquery') return <span key={idx} data-title="jquery"><img src='/images/ico-jquery.svg' alt='jquery'></img></span>
                             else if (item == 'react') return <span key={idx} data-title="react.js"><FontAwesomeIcon icon={faReact}/></span>
                             else if (item == 'vue') return <span key={idx} data-title="vue.js"><FontAwesomeIcon icon={faVuejs}/></span>
+                            else if (item == 'nodejs') return <span key={idx} data-title="node.js"><FontAwesomeIcon icon={faNodeJs}/></span>
                             else if (item == 'django') return <span key={idx} data-title="django"><img src='/images/ico-django.svg' alt='django'></img></span>
                           })
                         }

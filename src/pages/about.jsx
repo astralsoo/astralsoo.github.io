@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3Alt, faGitAlt, faGithub, faHtml5, faReact, faSquareFigma, faSquareJs, faVuejs } from '@fortawesome/free-brands-svg-icons'
+import { faCss3Alt, faGitAlt, faGithub, faHtml5, faNodeJs, faReact, faSquareFigma, faSquareJs, faVuejs } from '@fortawesome/free-brands-svg-icons'
 import '../css/about.css'
 import { useRef } from 'react'
 
@@ -98,11 +98,12 @@ function About() {
               <SkillList classNm="good" icon={<FontAwesomeIcon icon={faReact} />} txt={'React'}></SkillList>
               <SkillList classNm="soso" icon={<FontAwesomeIcon icon={faVuejs} />} txt={'Vue'}></SkillList>
               <SkillList classNm="good" icon={<img src='/images/ico-django.svg' alt='django'></img>} txt={'Django'}></SkillList>
-              <SkillList classNm="soso" icon={<img src='/images/ico-gsap.svg' alt='gsap'></img>} txt={'GSAP'}></SkillList>              
+              <SkillList classNm="soso" icon={<FontAwesomeIcon icon={faNodeJs} />} txt={'NodeJs'}></SkillList>
+              <SkillList classNm="soso" icon={<img src='/images/ico-gsap.svg' alt='gsap'></img>} txt={'GSAP'}></SkillList>
+              <SkillList classNm="good" icon={<FontAwesomeIcon icon={faSquareFigma} />} txt={'Figma'}></SkillList>      
               <SkillList classNm="good" icon={<FontAwesomeIcon icon={faGitAlt} />} txt={'Git'}></SkillList>
               <SkillList classNm="good" icon={<FontAwesomeIcon icon={faGithub} />} txt={'Github'}></SkillList>
-              <SkillList classNm="good" icon={<FontAwesomeIcon icon={faSquareFigma} />} txt={'Figma'}></SkillList>
-              <SkillList classNm="soso" icon={<img src='/images/ico-photoshop.svg' alt='photoshop'></img>} txt={'Photoshop'}></SkillList>
+              {/* <SkillList classNm="soso" icon={<img src='/images/ico-photoshop.svg' alt='photoshop'></img>} txt={'Photoshop'}></SkillList> */}
             </ul>
           </div>
         </div>
