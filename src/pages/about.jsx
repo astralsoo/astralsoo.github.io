@@ -18,6 +18,7 @@ function About() {
   const aboutRef = useRef(null)
   const underlineRef01 = useRef(null)
   const underlineRef02 = useRef(null)
+  const underlineRef03 = useRef(null)
 
   useGSAP( () => {
     gsap.fromTo(aboutRef.current, {
@@ -46,6 +47,14 @@ function About() {
     })
     gsap.to(underlineRef02.current, {
       animation: 'underlineAni 1s 1s both alternate',
+      scrollTrigger: {
+        trigger: '.career',
+        start: 'top 60%', 
+        toggleActions: "play none none none",
+      },
+    })
+    gsap.to(underlineRef03.current, {
+      animation: 'underlineAni 2s 1s both alternate',
       scrollTrigger: {
         trigger: '.career',
         start: 'top 60%', 
@@ -83,8 +92,12 @@ function About() {
                 <p className='txt-underline'>(주)앤드와이즈 <span>지니웍스 사업부 유지보수팀 주임연구원</span><span className='line' ref={underlineRef01}></span></p>
               </li>
               <li>
-                <p>2023. 08 ~</p>
+                <p>2023. 08 ~ 2025. 10</p>
                 <p className='txt-underline'>(주)리테일앤인사이트 <span>IT부서 STP팀 대리</span><span className='line' ref={underlineRef02}></span></p>
+              </li>
+              <li>
+                <p>2025. 11 ~</p>
+                <p className='txt-underline'>(주)토마토시스템 <span>UI/UX사업부 주임</span><span className='line' ref={underlineRef02}></span></p>
               </li>
             </ul>
           </div>
