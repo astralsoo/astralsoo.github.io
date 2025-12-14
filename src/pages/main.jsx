@@ -15,10 +15,10 @@ function Main() {
   const line01Ref = useRef(null)
   const line02Ref = useRef(null)
   const isIOS = () => {
-    const uaCheck = /iPad|iPhone|iPod/.test(navigator.userAgent)
-    const touchCheck = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1
-    const sizeCheck = window.innerWidth <= 1024
-    return uaCheck || (touchCheck && sizeCheck)
+    return (
+      /AppleWebKit/.test(navigator.userAgent) &&
+      !/Chrome|Edg|OPR|Firefox/.test(navigator.userAgent)
+    )
   }
 
   useEffect(() => {
