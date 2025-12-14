@@ -97,7 +97,7 @@ function About() {
               </li>
               <li>
                 <p>2025. 11 ~</p>
-                <p className='txt-underline'>(주)토마토시스템 <span>UI/UX사업부 주임</span><span className='line' ref={underlineRef02}></span></p>
+                <p className='txt-underline'>(주)토마토시스템 <span>UI/UX사업부 주임</span><span className='line' ref={underlineRef03}></span></p>
               </li>
             </ul>
           </div>
